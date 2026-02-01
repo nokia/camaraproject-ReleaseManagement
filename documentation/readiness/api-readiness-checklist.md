@@ -4,23 +4,9 @@
 
 The API readiness checklist defines the set of assets that need to be provided with an API version to be release-ready.
 
-## API release assets
-
-The following list describes the release assets to be provided, and their expected location.
-,
-| Release asset | Description                                  | Location         |
-|---------------|----------------------------------------------|------------------|
-| Release Plan | The `release-plan.yaml` file must be updated to reflect the targeted release | [relative link](/release-plan.yaml) |
-| API Definition(s) | There must be one API definition file {api-name}.yaml per API in the repository. The API must follow the applicable CAMARA Commonalities and ICM Guidelines. | [relative link](/code/API_definitions/{api-name}.yaml) |
-| API Documentation | The API documentation must be provided inside the API definition file. Additional documentation may be provided as well. |  [link](/code/API_definitions/{api-name}.yaml) or [link](/documentation/API_documentation/*.md (optional)) |
-| User Stories | There must be at least one user story file in the repository. One user story may cover a single or multiple APIs. Each API needs to be covered by at least one user story. | [relative link](/documentation/API_documentation/{api-name}_User_Story.md) |
-| Test Cases (basic) | Basic API test cases must be provided covering sunny day scenarios and main error cases, along with documentation. There must be at least one feature file per API, or optionally, one for each operationId of an API. | [relative link](/code/Test_definitions/{api-name}.feature) or [relative link](/code/Test_definitions/{api-name}-{operationId}.feature) |
-| Test Cases (enhanced) | Enhanced API test cases must be provided covering rainy day scenarios, along with documentation. | [relative link](/code/Test_definitions) |
-| API Description | A link to the API description on the CAMARA Wiki must be provided for each API for marketing purposes. | [relative link](/README.md) |
-
 ## The API readiness checklist
 
-The following table presents the API readiness checklist for an API version. 
+The following table presents the API readiness checklist for each API version type. 
 
 The required assets depend on 
 
@@ -43,6 +29,20 @@ In the table, 
 | 5 | Test Cases (basic)         |   O   |         M         |          M         |    M   |
 | 6 | Test Cases (enhanced)      |   O   |         O         |          O         |    M   |
 | 7 | API Description            |   O   |         O         |          M         |    M   |
+
+## API release assets
+
+The following list explains the release assets to be provided in more detail, and indicates their expected location.
+,
+| Release asset | Description                                  | Location         |
+|---------------|----------------------------------------------|------------------|
+| Release Plan | The `release-plan.yaml` file must be updated to reflect the targeted release | [relative link](/release-plan.yaml) |
+| API Definition(s) | There must be one API definition file {api-name}.yaml per API in the repository. The API must follow the applicable CAMARA Commonalities and ICM Guidelines. | [relative link](/code/API_definitions/{api-name}.yaml) |
+| API Documentation | The API documentation must be provided inside the API definition file. Additional documentation may be provided as well. |  [link](/code/API_definitions/{api-name}.yaml) or [link](/documentation/API_documentation/*.md (optional)) |
+| User Stories | There must be at least one user story file in the repository. One user story may cover a single or multiple APIs. Each API needs to be covered by at least one user story. | [relative link](/documentation/API_documentation/{api-name}_User_Story.md) |
+| Test Cases (basic) | Basic API test cases must be provided covering sunny day scenarios and main error cases, along with documentation. There must be at least one feature file per API, or optionally, one for each operationId of an API. | [relative link](/code/Test_definitions/{api-name}.feature) or [relative link](/code/Test_definitions/{api-name}-{operationId}.feature) |
+| Test Cases (enhanced) | Enhanced API test cases must be provided covering rainy day scenarios, along with documentation. | [relative link](/code/Test_definitions) |
+| API Description | A link to the API description on the CAMARA Wiki must be provided for each API for marketing purposes. | [relative link](/README.md) |
 
 ## Readiness review
 
