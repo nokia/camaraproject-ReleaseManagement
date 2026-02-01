@@ -2,12 +2,12 @@
 
 ## Purpose
 
-The API readiness checklist defines the set of assets that eed to be delivered with an API version to be release-ready.
+The API readiness checklist defines the set of assets that need to be provided with an API version to be release-ready.
 
-## The API readiness checklist
+## API release assets
 
-The following list describes the release assets to be provided and their expected location.
-
+The following list describes the release assets to be provided, and their expected location.
+,
 | Release asset | Description                                  | Location         |
 |---------------|----------------------------------------------|------------------|
 | Release Plan | The `release-plan.yaml` file must be updated to reflect the targeted release | [relative link](/release-plan.yaml) |
@@ -17,6 +17,8 @@ The following list describes the release assets to be provided and their expecte
 | Test Cases (basic) | Basic API test cases must be provided covering sunny day scenarios and main error cases, along with documentation. There must be at least one feature file per API, or optionally, one for each operationId of an API. | [relative link](/code/Test_definitions/{api-name}.feature) or [relative link](/code/Test_definitions/{api-name}-{operationId}.feature) |
 | Test Cases (enhanced) | Enhanced API test cases must be provided covering rainy day scenarios, along with documentation. | [relative link](/code/Test_definitions) |
 | API Description | A link to the API description on the CAMARA Wiki must be provided for each API for marketing purposes. | [relative link](/README.md) |
+
+## The API readiness checklist
 
 The following table presents the API readiness checklist for an API version. 
 
@@ -30,9 +32,9 @@ In the table, 
 - "M" indicates a mandatory release asset
 - "O" indicates an optional release asset which may be provided with the release, if available.  
 
-**Assets per target_release_type**
+**Release assets per target_release_type**
 
-| Nr | API release asset          | alpha | release-candidate |  initial<br>public | stable<br> public |
+| Nr | API release asset          | alpha | release-candidate |  initial public | stable public |
 |---|----------------------------|:-----:|:-----------------:|:------------------:|:------:|
 | 1 | Release Plan               |   M   |         M         |          M         |    M   |
 | 2 | API Definition(s)          |   M   |         M         |          M         |    M   |
@@ -51,5 +53,4 @@ The appropriateness of the content of these files need to be checked by release 
 ## See also
 
 - [../README.md](../README.md) for documentation index
-- [readiness-model.md](readiness-model.md) for the conceptual model
 - [../deprecated/API-Readiness-Checklist.md](../deprecated/API-Readiness-Checklist.md) for the legacy template
