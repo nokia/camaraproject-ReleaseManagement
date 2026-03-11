@@ -1,21 +1,21 @@
 metadata:
-  last_updated: '2026-03-09T06:13:55Z'
-  last_checked: '2026-03-09T06:13:55Z'
-  releases_master_updated: '2026-03-06T05:32:48.025Z'
+  last_updated: '2026-03-11T15:09:36Z'
+  last_checked: '2026-03-11T15:09:36Z'
+  releases_master_updated: '2026-03-11T05:33:53.246Z'
   schema_version: 1.2.0
   collector_version: 1.2.0
   repos_scanned: 66
-  repos_with_plan: 23
+  repos_with_plan: 27
 meta_releases:
 - name: Fall25
-  total_apis: 12
+  total_apis: 18
   m1_achieved: 3
-  m3_achieved: 11
-  m4_achieved: 12
+  m3_achieved: 17
+  m4_achieved: 18
 - name: Spring26
-  total_apis: 2
+  total_apis: 4
   m1_achieved: 1
-  m3_achieved: 0
+  m3_achieved: 3
   m4_achieved: 0
 - name: Sync26
   total_apis: 4
@@ -185,7 +185,7 @@ progress:
     - YadingFang
     - Wojiaozhenghao
     - XunliYang
-  state: planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
@@ -202,21 +202,17 @@ progress:
       - api_name: click-to-dial
         api_version: 0.1.0-alpha.1
     m3:
-      release_tag: null
-      release_date: null
+      release_tag: r1.2
+      release_date: '2026-03-09T15:09:22Z'
       apis:
       - api_name: click-to-dial
-        api_version: null
+        api_version: 0.1.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis:
       - api_name: click-to-dial
         api_version: null
-  warnings:
-  - code: W005
-    message: Active release plan but no caller workflow installed
-    severity: warning
 - repository: ConsentInfo
   github_url: https://github.com/camaraproject/ConsentInfo
   release_track: independent
@@ -233,12 +229,17 @@ progress:
     - jpengar
     - AxelNennker
     - sebdewet
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.2-6a47a39
+    release_pr:
+      number: 55
+      state: open
+      url: https://github.com/camaraproject/ConsentInfo/pull/55
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 53
+      url: https://github.com/camaraproject/ConsentInfo/issues/53
   published_context:
     latest_public_release: r1.2
     newest_pre_release: r2.1
@@ -305,6 +306,194 @@ progress:
       apis:
       - api_name: consent-management
         api_version: null
+- repository: DedicatedNetworks
+  github_url: https://github.com/camaraproject/DedicatedNetworks
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: r1.2
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: dedicated-network-accesses
+    target_api_version: 0.1.0
+    target_api_status: public
+    main_contacts:
+    - tlohmar
+    - PeterKovacs2
+    - carlosromerog
+    - eric-murray
+  - api_name: dedicated-network-profiles
+    target_api_version: 0.1.0
+    target_api_status: public
+    main_contacts:
+    - tlohmar
+    - PeterKovacs2
+    - carlosromerog
+    - eric-murray
+  - api_name: dedicated-network
+    target_api_version: 0.1.0
+    target_api_status: public
+    main_contacts:
+    - tlohmar
+    - PeterKovacs2
+    - carlosromerog
+    - eric-murray
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: r1.2
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: dedicated-network-accesses
+        api_version: null
+      - api_name: dedicated-network-profiles
+        api_version: null
+      - api_name: dedicated-network
+        api_version: null
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-21T11:45:44Z'
+      apis:
+      - api_name: dedicated-network-accesses
+        api_version: 0.1.0-rc.1
+      - api_name: dedicated-network-profiles
+        api_version: 0.1.0-rc.1
+      - api_name: dedicated-network
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-18T07:42:08Z'
+      apis:
+      - api_name: dedicated-network-accesses
+        api_version: 0.1.0
+      - api_name: dedicated-network-profiles
+        api_version: 0.1.0
+      - api_name: dedicated-network
+        api_version: 0.1.0
+- repository: DeviceAuthenticity
+  github_url: https://github.com/camaraproject/DeviceAuthenticity
+  release_track: independent
+  target_release_tag: r1.1
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: placeholder-entry
+    target_api_version: 0.1.0
+    target_api_status: draft
+    main_contacts:
+    - ALIIQBAL786
+    - usmanTheCoder
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
+    m3:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
+    m4:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
+- repository: DeviceLocation
+  github_url: https://github.com/camaraproject/DeviceLocation
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: r3.2
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: geofencing-subscriptions
+    target_api_version: 0.5.0
+    target_api_status: public
+    main_contacts:
+    - bigludo7
+    - jlurien
+    - maxl2287
+  - api_name: location-retrieval
+    target_api_version: 0.5.0
+    target_api_status: public
+    main_contacts:
+    - bigludo7
+    - jlurien
+    - maxl2287
+  - api_name: location-verification
+    target_api_version: 3.0.0
+    target_api_status: public
+    main_contacts:
+    - bigludo7
+    - jlurien
+    - maxl2287
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: r3.2
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: geofencing-subscriptions
+        api_version: null
+      - api_name: location-retrieval
+        api_version: null
+      - api_name: location-verification
+        api_version: null
+    m3:
+      release_tag: r3.1
+      release_date: '2025-07-17T14:45:50Z'
+      apis:
+      - api_name: geofencing-subscriptions
+        api_version: 0.5.0-rc.1
+      - api_name: location-retrieval
+        api_version: 0.5.0-rc.1
+      - api_name: location-verification
+        api_version: 3.0.0-rc.1
+    m4:
+      release_tag: r3.2
+      release_date: '2025-09-16T11:41:00Z'
+      apis:
+      - api_name: geofencing-subscriptions
+        api_version: 0.5.0
+      - api_name: location-retrieval
+        api_version: 0.5.0
+      - api_name: location-verification
+        api_version: 3.0.0
 - repository: DeviceMediaStreamingRate
   github_url: https://github.com/camaraproject/DeviceMediaStreamingRate
   release_track: independent
@@ -624,21 +813,28 @@ progress:
 - repository: NetworkSliceBooking
   github_url: https://github.com/camaraproject/NetworkSliceBooking
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Spring26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.1
+    identity_consent_management_release: r4.1
   apis:
   - api_name: network-slice-booking
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - chinaunicomyangfan
     - DanXu-ChinaTelecom
     - Kai-hw
-  state: not_planned
+  - api_name: network-slice-assignment
+    target_api_version: 0.1.0
+    target_api_status: rc
+    main_contacts:
+    - chinaunicomyangfan
+    - DanXu-ChinaTelecom
+    - Kai-hw
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
@@ -646,7 +842,7 @@ progress:
     release_issue: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
@@ -654,18 +850,24 @@ progress:
       apis:
       - api_name: network-slice-booking
         api_version: null
+      - api_name: network-slice-assignment
+        api_version: null
     m3:
-      release_tag: r1.1
-      release_date: '2025-08-01T08:01:19Z'
+      release_tag: r2.1
+      release_date: '2026-03-11T02:25:30Z'
       apis:
       - api_name: network-slice-booking
+        api_version: 0.2.0-rc.1
+      - api_name: network-slice-assignment
         api_version: 0.1.0-rc.1
     m4:
-      release_tag: r1.2
-      release_date: '2025-09-17T01:33:48Z'
+      release_tag: null
+      release_date: null
       apis:
       - api_name: network-slice-booking
-        api_version: 0.1.0
+        api_version: null
+      - api_name: network-slice-assignment
+        api_version: null
 - repository: OptimalEdgeDiscovery
   github_url: https://github.com/camaraproject/OptimalEdgeDiscovery
   release_track: meta-release
@@ -715,6 +917,50 @@ progress:
       release_date: '2025-09-17T15:32:16Z'
       apis:
       - api_name: optimal-edge-discovery
+        api_version: 0.1.0
+- repository: PredictiveConnectivityData
+  github_url: https://github.com/camaraproject/PredictiveConnectivityData
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: r1.2
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: predictive-connectivity-data
+    target_api_version: 0.1.0
+    target_api_status: public
+    main_contacts:
+    - eric-murray
+    - albertoramosmonagas
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: r1.2
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: predictive-connectivity-data
+        api_version: null
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-24T08:21:30Z'
+      apis:
+      - api_name: predictive-connectivity-data
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-16T14:08:33Z'
+      apis:
+      - api_name: predictive-connectivity-data
         api_version: 0.1.0
 - repository: QualityOnDemand
   github_url: https://github.com/camaraproject/QualityOnDemand
@@ -881,7 +1127,7 @@ progress:
   github_url: https://github.com/camaraproject/ReleaseTest
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r1.2
+  target_release_tag: r1.3
   target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.1
