@@ -1,21 +1,21 @@
 metadata:
-  last_updated: '2026-03-11T06:06:14Z'
-  last_checked: '2026-03-11T06:06:14Z'
-  releases_master_updated: '2026-03-10T09:13:23.423Z'
+  last_updated: '2026-03-16T15:34:16Z'
+  last_checked: '2026-03-16T15:34:16Z'
+  releases_master_updated: '2026-03-13T05:33:53.054Z'
   schema_version: 1.2.0
   collector_version: 1.2.0
   repos_scanned: 66
-  repos_with_plan: 27
+  repos_with_plan: 31
 meta_releases:
 - name: Fall25
-  total_apis: 18
+  total_apis: 22
   m1_achieved: 3
-  m3_achieved: 17
-  m4_achieved: 18
+  m3_achieved: 21
+  m4_achieved: 22
 - name: Spring26
   total_apis: 4
   m1_achieved: 1
-  m3_achieved: 1
+  m3_achieved: 3
   m4_achieved: 0
 - name: Sync26
   total_apis: 4
@@ -123,6 +123,66 @@ progress:
       apis:
       - api_name: application-endpoint-registration
         api_version: 0.1.0
+- repository: BlockchainPublicAddress
+  github_url: https://github.com/camaraproject/BlockchainPublicAddress
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: r2.2
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: blockchain-public-address-validation
+    target_api_version: 0.1.0
+    target_api_status: public
+    main_contacts:
+    - PedroDiez
+    - grgpapadopoulos
+    - ksl4dtit
+    - rartych
+  - api_name: blockchain-public-address
+    target_api_version: 0.3.0
+    target_api_status: public
+    main_contacts:
+    - PedroDiez
+    - grgpapadopoulos
+    - ksl4dtit
+    - rartych
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: r2.2
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: blockchain-public-address-validation
+        api_version: null
+      - api_name: blockchain-public-address
+        api_version: null
+    m3:
+      release_tag: r2.1
+      release_date: '2025-07-29T09:11:51Z'
+      apis:
+      - api_name: blockchain-public-address-validation
+        api_version: 0.1.0-rc.1
+      - api_name: blockchain-public-address
+        api_version: 0.3.0-rc.1
+    m4:
+      release_tag: r2.2
+      release_date: '2025-09-11T10:58:35Z'
+      apis:
+      - api_name: blockchain-public-address-validation
+        api_version: 0.1.0
+      - api_name: blockchain-public-address
+        api_version: 0.3.0
 - repository: CallForwardingSignal
   github_url: https://github.com/camaraproject/CallForwardingSignal
   release_track: meta-release
@@ -216,30 +276,30 @@ progress:
 - repository: ConsentInfo
   github_url: https://github.com/camaraproject/ConsentInfo
   release_track: independent
-  target_release_tag: r2.2
-  target_release_type: pre-release-rc
+  target_release_tag: r2.3
+  target_release_type: public-release
   dependencies:
     commonalities_release: r3.4
     identity_consent_management_release: r3.3
   apis:
   - api_name: consent-info
     target_api_version: 0.2.0
-    target_api_status: rc
+    target_api_status: public
     main_contacts:
     - jpengar
     - AxelNennker
     - sebdewet
   state: snapshot_active
   artifacts:
-    snapshot_branch: release-snapshot/r2.2-6a47a39
+    snapshot_branch: release-snapshot/r2.3-7fba564
     release_pr:
-      number: 55
+      number: 62
       state: open
-      url: https://github.com/camaraproject/ConsentInfo/pull/55
+      url: https://github.com/camaraproject/ConsentInfo/pull/62
     draft_release: null
     release_issue:
-      number: 53
-      url: https://github.com/camaraproject/ConsentInfo/issues/53
+      number: 61
+      url: https://github.com/camaraproject/ConsentInfo/issues/61
   published_context:
     latest_public_release: r1.2
     newest_pre_release: r2.1
@@ -810,6 +870,48 @@ progress:
       apis:
       - api_name: placeholder-entry
         api_version: null
+- repository: NetworkInsights
+  github_url: https://github.com/camaraproject/NetworkInsights
+  release_track: independent
+  target_release_tag: r1.1
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: placeholder-entry
+    target_api_version: 0.1.0
+    target_api_status: draft
+    main_contacts:
+    - cnzj-Gc
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
+    m3:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
+    m4:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
 - repository: NetworkSliceBooking
   github_url: https://github.com/camaraproject/NetworkSliceBooking
   release_track: meta-release
@@ -842,7 +944,7 @@ progress:
     release_issue: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
@@ -853,13 +955,13 @@ progress:
       - api_name: network-slice-assignment
         api_version: null
     m3:
-      release_tag: null
-      release_date: null
+      release_tag: r2.1
+      release_date: '2026-03-11T02:25:30Z'
       apis:
       - api_name: network-slice-booking
-        api_version: null
+        api_version: 0.2.0-rc.1
       - api_name: network-slice-assignment
-        api_version: null
+        api_version: 0.1.0-rc.1
     m4:
       release_tag: null
       release_date: null
@@ -868,11 +970,6 @@ progress:
         api_version: null
       - api_name: network-slice-assignment
         api_version: null
-  warnings:
-  - code: W003
-    message: Release r2.1 has been published. Milestone data will be updated in the
-      next 24 hours.
-    severity: warning
 - repository: OptimalEdgeDiscovery
   github_url: https://github.com/camaraproject/OptimalEdgeDiscovery
   release_track: meta-release
@@ -1132,7 +1229,7 @@ progress:
   github_url: https://github.com/camaraproject/ReleaseTest
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r1.3
+  target_release_tag: r1.4
   target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.1
@@ -1143,12 +1240,17 @@ progress:
     target_api_status: rc
     main_contacts:
     - hdamker-bot
-  state: published
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r1.4-a543923
+    release_pr:
+      number: 47
+      state: open
+      url: https://github.com/camaraproject/ReleaseTest/pull/47
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 46
+      url: https://github.com/camaraproject/ReleaseTest/issues/46
   published_context:
     latest_public_release: null
     newest_pre_release: r1.1
@@ -1170,6 +1272,50 @@ progress:
       release_date: null
       apis:
       - api_name: release-test
+        api_version: null
+- repository: SessionInsights
+  github_url: https://github.com/camaraproject/SessionInsights
+  release_track: independent
+  target_release_tag: r1.1
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: placeholder-entry
+    target_api_version: 0.1.0
+    target_api_status: draft
+    main_contacts:
+    - benhepworth
+    - maheshc01
+    - kevsy
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
+    m3:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
+        api_version: null
+    m4:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: placeholder-entry
         api_version: null
 - repository: SimpleEdgeDiscovery
   github_url: https://github.com/camaraproject/SimpleEdgeDiscovery
@@ -1217,6 +1363,64 @@ progress:
       apis:
       - api_name: simple-edge-discovery
         api_version: 2.0.0
+- repository: SimSwap
+  github_url: https://github.com/camaraproject/SimSwap
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: r3.3
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: sim-swap-subscriptions
+    target_api_version: 0.3.0
+    target_api_status: public
+    main_contacts:
+    - bigludo7
+    - fernandopradocabrillo
+    - maxl2287
+  - api_name: sim-swap
+    target_api_version: 2.1.0
+    target_api_status: public
+    main_contacts:
+    - bigludo7
+    - fernandopradocabrillo
+    - maxl2287
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: r3.3
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: sim-swap-subscriptions
+        api_version: null
+      - api_name: sim-swap
+        api_version: null
+    m3:
+      release_tag: r3.1
+      release_date: '2025-07-18T09:52:55Z'
+      apis:
+      - api_name: sim-swap-subscriptions
+        api_version: 0.3.0-rc.1
+      - api_name: sim-swap
+        api_version: 2.1.0-rc.2
+    m4:
+      release_tag: r3.2
+      release_date: '2025-09-17T15:10:21Z'
+      apis:
+      - api_name: sim-swap-subscriptions
+        api_version: 0.3.0
+      - api_name: sim-swap
+        api_version: 2.1.0
 - repository: SubscriptionStatus
   github_url: https://github.com/camaraproject/SubscriptionStatus
   release_track: meta-release
