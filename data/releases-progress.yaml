@@ -1,11 +1,11 @@
 metadata:
-  last_updated: '2026-03-23T20:53:58Z'
-  last_checked: '2026-03-23T20:53:58Z'
-  releases_master_updated: '2026-03-23T19:28:45.630Z'
+  last_updated: '2026-04-02T06:42:46Z'
+  last_checked: '2026-04-02T06:42:46Z'
+  releases_master_updated: '2026-03-23T21:37:46.224Z'
   schema_version: 1.4.0
   collector_version: 1.4.0
   repos_scanned: 66
-  repos_with_plan: 38
+  repos_with_plan: 39
 meta_releases:
 - name: Fall24
   total_apis: 25
@@ -23,14 +23,14 @@ meta_releases:
   m3_achieved: 35
   m4_achieved: 36
 - name: Spring26
-  total_apis: 5
+  total_apis: 3
   m1_achieved: 1
   m3_achieved: 3
   m4_achieved: 0
 - name: Sync26
-  total_apis: 4
-  m1_achieved: 1
-  m3_achieved: 1
+  total_apis: 6
+  m1_achieved: 3
+  m3_achieved: 3
   m4_achieved: 0
 progress:
 - repository: ApplicationEndpointDiscovery
@@ -723,6 +723,56 @@ progress:
       apis:
       - api_name: placeholder-entry
         api_version: null
+- repository: DeviceIdentifier
+  github_url: https://github.com/camaraproject/DeviceIdentifier
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: r2.2
+  target_release_type: none
+  dependencies:
+    commonalities_release: r3.4
+    identity_consent_management_release: r3.3
+  apis:
+  - api_name: device-identifier
+    target_api_version: 0.3.0
+    target_api_status: public
+    main_contacts:
+    - eric-murray
+    - Kevsy
+  state: completed
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: r2.2
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis:
+      - api_name: device-identifier
+        api_version: null
+    m3:
+      release_tag: r2.1
+      release_date: '2025-07-22T11:13:38Z'
+      apis:
+      - api_name: device-identifier
+        api_version: 0.3.0-rc.1
+    m4:
+      release_tag: r2.2
+      release_date: '2025-09-16T16:22:11Z'
+      apis:
+      - api_name: device-identifier
+        api_version: 0.3.0
+  last_published:
+    release_tag: r2.2
+    release_date: '2025-09-16T16:22:11Z'
+    apis:
+    - api_name: device-identifier
+      api_version: 0.3.0
 - repository: DeviceLocation
   github_url: https://github.com/camaraproject/DeviceLocation
   release_track: meta-release
@@ -1120,7 +1170,9 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 22
+      url: https://github.com/camaraproject/MultiPointVPN/issues/22
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1143,10 +1195,6 @@ progress:
       apis:
       - api_name: multi-point-vpn
         api_version: null
-  warnings:
-  - code: W005
-    message: Active release plan but no caller workflow installed
-    severity: warning
 - repository: NetworkAccessManagement
   github_url: https://github.com/camaraproject/NetworkAccessManagement
   release_track: independent
@@ -1194,30 +1242,31 @@ progress:
         api_version: null
 - repository: NetworkInsights
   github_url: https://github.com/camaraproject/NetworkInsights
-  release_track: meta-release
-  meta_release: Spring26
+  release_track: independent
   target_release_tag: r1.1
-  target_release_type: none
+  target_release_type: pre-release-alpha
   dependencies:
     commonalities_release: r4.1
-    identity_consent_management_release: r4.1
+    identity_consent_management_release: r4.2
   apis:
   - api_name: network-health-assessment
     target_api_version: 0.1.0
-    target_api_status: draft
+    target_api_status: alpha
     main_contacts:
     - cnzj-Gc
   - api_name: network-traffic-analysis
     target_api_version: 0.1.0
-    target_api_status: draft
+    target_api_status: alpha
     main_contacts:
     - cnzj-Gc
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 43
+      url: https://github.com/camaraproject/NetworkInsights/issues/43
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1765,17 +1814,24 @@ progress:
     target_api_status: rc
     main_contacts:
     - hdamker-bot
-  state: snapshot_active
+  - api_name: sample-service
+    target_api_version: 0.1.0
+    target_api_status: rc
+    main_contacts:
+    - hdamker-bot
+  - api_name: sample-service-subscriptions
+    target_api_version: 0.1.0
+    target_api_status: rc
+    main_contacts:
+    - hdamker-bot
+  state: planned
   artifacts:
-    snapshot_branch: release-snapshot/r1.4-a543923
-    release_pr:
-      number: 47
-      state: open
-      url: https://github.com/camaraproject/ReleaseTest/pull/47
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
     release_issue:
-      number: 46
-      url: https://github.com/camaraproject/ReleaseTest/issues/46
+      number: 60
+      url: https://github.com/camaraproject/ReleaseTest/issues/60
   published_context:
     latest_public_release: null
     newest_pre_release: r1.3
@@ -1786,17 +1842,29 @@ progress:
       apis:
       - api_name: release-test
         api_version: 1.0.0-alpha.1
+      - api_name: sample-service
+        api_version: null
+      - api_name: sample-service-subscriptions
+        api_version: null
     m3:
       release_tag: r1.2
       release_date: '2026-03-05T15:48:16Z'
       apis:
       - api_name: release-test
         api_version: 1.0.0-rc.1
+      - api_name: sample-service
+        api_version: null
+      - api_name: sample-service-subscriptions
+        api_version: null
     m4:
       release_tag: null
       release_date: null
       apis:
       - api_name: release-test
+        api_version: null
+      - api_name: sample-service
+        api_version: null
+      - api_name: sample-service-subscriptions
         api_version: null
   last_published:
     release_tag: r1.3
@@ -1804,8 +1872,10 @@ progress:
     apis:
     - api_name: release-test
       api_version: 1.0.0-rc.2
-  snapshot_api_versions:
-    release-test: 1.0.0-rc.3
+    - api_name: sample-service
+      api_version: null
+    - api_name: sample-service-subscriptions
+      api_version: null
 - repository: SessionInsights
   github_url: https://github.com/camaraproject/SessionInsights
   release_track: independent
@@ -1827,7 +1897,9 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 81
+      url: https://github.com/camaraproject/SessionInsights/issues/81
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1850,10 +1922,6 @@ progress:
       apis:
       - api_name: session-insights
         api_version: null
-  warnings:
-  - code: W005
-    message: Active release plan but no caller workflow installed
-    severity: warning
 - repository: SimpleEdgeDiscovery
   github_url: https://github.com/camaraproject/SimpleEdgeDiscovery
   release_track: meta-release
@@ -2772,51 +2840,6 @@ progress:
       api_version: 0.1.0
     - api_name: device-data-volume
       api_version: 0.1.0
-  source: historical
-- repository: DeviceIdentifier
-  github_url: https://github.com/camaraproject/DeviceIdentifier
-  release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: null
-  target_release_type: null
-  apis:
-  - api_name: device-identifier
-    target_api_version: 0.3.0
-    target_api_status: ''
-  state: historical
-  artifacts:
-    snapshot_branch: null
-    release_pr: null
-    draft_release: null
-    release_issue: null
-  published_context:
-    latest_public_release: null
-    newest_pre_release: null
-  cycle_releases:
-    m1:
-      release_tag: null
-      release_date: null
-      apis:
-      - api_name: device-identifier
-        api_version: null
-    m3:
-      release_tag: r2.1
-      release_date: '2025-07-22T11:13:38Z'
-      apis:
-      - api_name: device-identifier
-        api_version: 0.3.0-rc.1
-    m4:
-      release_tag: r2.2
-      release_date: '2025-09-16T16:22:11Z'
-      apis:
-      - api_name: device-identifier
-        api_version: 0.3.0
-  last_published:
-    release_tag: r2.2
-    release_date: '2025-09-16T16:22:11Z'
-    apis:
-    - api_name: device-identifier
-      api_version: 0.3.0
   source: historical
 - repository: DeviceIdentifier
   github_url: https://github.com/camaraproject/DeviceIdentifier
