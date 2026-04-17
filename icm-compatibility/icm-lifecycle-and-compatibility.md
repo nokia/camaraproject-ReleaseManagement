@@ -266,5 +266,173 @@ Condistions that may trigger such exceptional overrides are for example:
 
 ![ICM Lifecycle State Transitions](ICM_Lifecycle_State_Transitions.png)
 
-## ICM–API compatibility matrix
+## API–ICM Compatibility Matrix
 
+### Purpose
+The API–ICM Compatibility Matrix provides the authoritative, ecosystem-wide view of which CAMARA API versions are compatible with which ICM versions at a given point in time.
+It is a time-based view of compatibility derived from API declarations, ICM lifecycle states, and explicit exceptions.
+
+### Scope and Authority
+The matrix SHALL be owned and maintained by CAMARA governance responsible for ICM lifecycle management. 
+It SHALL be authoritative and SHALL NOT be owned or edited by individual API Sub Projects.
+
+### Relationship to API Versions
+Each API version SHALL declare its own `minICMVersion`. 
+The matrix derives compatibility from the API-declared `minICMVersion`, ICM lifecycle states, and approved exceptions. 
+It does not introduce new rules.
+
+### Relationship to ICM Lifecycle States
+- Preferred / Supported: compatible subject to `minICMVersion`
+- Grace: compatible for existing API specifications only
+- Deprecated / Unsupported: not compatible by default; compatibility only via explicit, time-bound exception
+
+### Ownership and Update Timing
+The matrix SHALL be updated whenever:
+- an ICM lifecycle state changes
+- an API version is published or advances its `minICMVersion`
+- an exception is approved, modified, or expires
+- a security or regulatory override is applied
+
+The matrix SHALL NOT be gated by Signal or Sync cadence.
+
+### Exceptions
+Exceptions SHALL be explicitly represented, time-bound, scoped, and removed automatically on expiry.
+
+## Compatibility Matrix Update Checklist
+- Trigger identified (lifecycle state change, API version update, exception)
+- Matrix updated immediately
+- Validation of lifecycle constraints
+- Communication to impacted API Sub Projects/API implementaors (operators)
+
+## Example
+
+```
+apiIcmCompatibilityMatrix:
+  metadata:
+    schemaVersion: "1.2"
+    publishedAt: "2026-03-15T10:00:00Z"
+    validAsOf: "2026-03-15"
+    publishedBy: "CAMARA ICM Governance"
+    notes: "Post-Signal26 compatibility snapshot"
+
+  icmVersions:
+    - icmVersion: "0.5.0"
+      lifecycleState: Supported
+      preferred: true
+      lifecycleEffectiveDate: "2026-02-01"
+
+    - icmVersion: "0.4.0"
+      lifecycleState: Supported
+      preferred: false
+      lifecycleEffectiveDate: "2025-10-01"
+
+    - icmVersion: "0.3.0"
+      lifecycleState: Grace
+      preferred: false
+      lifecycleEffectiveDate: "2025-03-01"
+      gracePeriod:
+        startDate: "2025-03-01"
+        endDate: "2026-09-30"
+        indicativeDuration: "18 months"
+        plannedNextState: Deprecated
+
+    - icmVersion: "0.2.1"
+      lifecycleState: Deprecated
+      preferred: false
+      lifecycleEffectiveDate: "2024-10-01"
+
+    - icmVersion: "0.1.0"
+      lifecycleState: Unsupported
+      preferred: false
+      lifecycleEffectiveDate: "2024-01-01"
+
+  apiVersions:
+    - apiName: "QualityOnDemand"
+      apiVersion: "v1.2"
+      owningWorkingGroup: "QoD WG"
+      minIcmVersion: "0.3.0"
+
+      compatibility:
+        - icmVersion: "0.5.0"
+          compatible: true
+          compatibilityType: Normal
+          rationale: "Meets minIcmVersion and lifecycle allows compatibility"
+
+        - icmVersion: "0.3.0"
+          compatible: true
+          compatibilityType: GraceExistingOnly
+          rationale: "ICM version in Grace; existing API version allowed"
+
+        - icmVersion: "0.2.1"
+          compatible: true
+          compatibilityType: Exception
+          rationale: "Temporary regulatory transition"
+          exception:
+            exceptionId: "EX-2026-02"
+            approvedBy: "CAMARA ICM Governance"
+            approvalDate: "2026-02-15"
+            expiry:
+              type: Date
+              value: "2026-09-30"
+            migrationPlan: "Migrate to ICM 0.4.0"
+            owner: "QoD WG"
+
+        - icmVersion: "0.1.0"
+          compatible: false
+          compatibilityType: NotCompatible
+          rationale: "ICM version Unsupported"
+```
+
+## yaml schema for compatibility matrix
+
+```
+apiIcmCompatibilityMatrix:
+  metadata:
+    schemaVersion: string          # Version of this schema (e.g. "1.1")
+    publishedAt: string            # ISO-8601 timestamp of this snapshot
+    validAsOf: string              # ISO-8601 date from which this snapshot is authoritative
+    publishedBy: string            # Governance owner (e.g. "CAMARA ICM Governance")
+    notes: string                  # Optional free text notes
+  icmVersions:
+    - icmVersion: string           # e.g. "0.5.0"
+      lifecycleState:              # Note: Preferred is NOT a lifecycle state
+        enum:
+          - Supported
+          - Grace
+          - Deprecated
+          - Unsupported
+      preferred: boolean             # true if this version is the Preferred design baseline
+      lifecycleEffectiveDate: string # ISO-8601 date lifecycleState became effective
+      gracePeriod:                   # REQUIRED if lifecycleState == Grace, not present otherwise
+        startDate: string            # ISO-8601 date Grace period started
+        endDate: string              # ISO-8601 date Grace period ends
+        indicativeDuration: string   # Human-readable (e.g. "18 months")
+        plannedNextState: Deprecated # e.g. "Deprecated"
+  apiVersions:
+    - apiName: string                # e.g. "QualityOnDemand"
+      apiVersion: string             # e.g. "1.2.0"
+      owningApiRepository: string    # API repository name (or API Sub Project name 
+      minIcmVersion: string          # Declared minIcmVersion of the API version
+      compatibility:
+        - icmVersion: string         # ICM version from ICM versions list
+          compatible: boolean        # true / false
+          compatibilityType:
+            enum:
+              - Normal               # Meets minIcmVersion and lifecycle allows compatibility
+              - GraceExistingOnly    # Allowed only for existing API versions
+              - Exception            # Allowed via explicit, time-bound exception
+              - NotCompatible        # Not compatible under governance rules
+          rationale: string          # Short explanation (human- or machine-readable)
+          exception:                 # Required only if compatibilityType == Exception
+            exceptionId: string
+            approvedBy: string
+            approvalDate: string     # ISO-8601 date
+            expiry:
+              type:
+                enum:
+                  - Date
+                  - Condition
+              value: string          # ISO-8601 date or condition
+            migrationPlan: string
+            owner: string
+```
