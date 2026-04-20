@@ -229,6 +229,7 @@ This section defines the complete lifecycle state machine for ICM versions.
 ### Allowed Transitions
 
 Under normal governance conditions, ICM lifecycle state transitions SHALL follow the sequence:
+
 Supported → Grace → Deprecated → Unsupported.
 
 Normal ICM lifecycle transitions:
@@ -256,7 +257,7 @@ Such overrides:
 - SHALL be communicated as exceptional measures
 - SHALL NOT establish precedent for normal lifecycle transitions
 
-Condistions that may trigger such exceptional overrides are for example:
+Conditions that may trigger such exceptional overrides are for example:
 - critical security vulnerabilities
 - legal non‑compliance
 - regulatory prohibition
