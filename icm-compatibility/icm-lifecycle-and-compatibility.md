@@ -1,5 +1,4 @@
-# Identity and Consent Management (ICM)
-## ICM Compatibility, Versioning, and Lifecycle Governance
+# ICM Lifecycle and Compatibility Governance
 
 ## Scope and Purpose
 
