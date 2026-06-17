@@ -1,14 +1,14 @@
 metadata:
-  last_updated: '2026-06-07T08:52:49Z'
-  last_checked: '2026-06-07T08:52:49Z'
-  releases_master_updated: '2026-06-07T06:50:38.735Z'
+  last_updated: '2026-06-17T08:39:01Z'
+  last_checked: '2026-06-17T08:39:01Z'
+  releases_master_updated: '2026-06-12T07:07:44.598Z'
   schema_version: 1.5.0
   collector_version: 1.5.0
   repos_scanned: 62
   repos_new: 0
   repos_with_plan: 62
-  repos_fully_onboarded: 28
-  repos_with_release_issue: 22
+  repos_fully_onboarded: 38
+  repos_with_release_issue: 34
 meta_releases:
 - name: Fall24
   total_apis: 25
@@ -31,8 +31,8 @@ meta_releases:
   m3_achieved: 3
   m4_achieved: 3
 - name: Sync26
-  total_apis: 35
-  m1_achieved: 5
+  total_apis: 49
+  m1_achieved: 6
   m3_achieved: 0
   m4_achieved: 0
 progress:
@@ -663,7 +663,7 @@ progress:
   target_release_tag: r3.1
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.2
+    commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: customer-insights
@@ -823,80 +823,68 @@ progress:
 - repository: DeviceDataVolume
   github_url: https://github.com/camaraproject/DeviceDataVolume
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.3
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: device-data-volume-subscriptions
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - maxl2287
     - sachinvodafone
   - api_name: device-data-volume
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - maxl2287
     - sachinvodafone
-  state: not_planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.1-14c3473
+    release_pr:
+      number: 86
+      state: open
+      url: https://github.com/camaraproject/DeviceDataVolume/pull/86
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 80
+      url: https://github.com/camaraproject/DeviceDataVolume/issues/80
   published_context:
     latest_public_release: r1.3
     newest_pre_release: null
   cycle_releases:
     m1:
-      release_tag: r1.1
-      release_date: '2025-01-16T16:32:33Z'
-      apis:
-      - api_name: device-data-volume-subscriptions
-        api_version: 0.1.0-alpha.1
-      - api_name: device-data-volume
-        api_version: 0.1.0-alpha.1
+      release_tag: null
+      release_date: null
+      apis: []
     m3:
-      release_tag: r1.2
-      release_date: '2025-07-25T14:22:52Z'
-      apis:
-      - api_name: device-data-volume-subscriptions
-        api_version: 0.1.0-rc.1
-      - api_name: device-data-volume
-        api_version: 0.1.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r1.3
-      release_date: '2025-09-12T09:19:47Z'
-      apis:
-      - api_name: device-data-volume-subscriptions
-        api_version: 0.1.0
-      - api_name: device-data-volume
-        api_version: 0.1.0
-  last_published:
-    release_tag: r1.3
-    release_date: '2025-09-12T09:19:47Z'
-    apis:
-    - api_name: device-data-volume-subscriptions
-      api_version: 0.1.0
-    - api_name: device-data-volume
-      api_version: 0.1.0
+      release_tag: null
+      release_date: null
+      apis: []
+  snapshot_api_versions:
+    device-data-volume-subscriptions: 0.2.0-rc.1
+    device-data-volume: 0.2.0-rc.1
 - repository: DeviceIdentifier
   github_url: https://github.com/camaraproject/DeviceIdentifier
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r3.1
-  target_release_type: pre-release-alpha
+  target_release_tag: r3.2
+  target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: device-identifier
     target_api_version: 0.4.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - eric-murray
     - Kevsy
@@ -906,16 +894,18 @@ progress:
     release_pr: null
     draft_release: null
     release_issue:
-      number: 163
-      url: https://github.com/camaraproject/DeviceIdentifier/issues/163
+      number: 176
+      url: https://github.com/camaraproject/DeviceIdentifier/issues/176
   published_context:
     latest_public_release: r2.2
-    newest_pre_release: null
+    newest_pre_release: r3.1
   cycle_releases:
     m1:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.1
+      release_date: '2026-06-11T09:59:39Z'
+      apis:
+      - api_name: device-identifier
+        api_version: 0.4.0-alpha.1
     m3:
       release_tag: null
       release_date: null
@@ -924,33 +914,39 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r3.1
+    release_date: '2026-06-11T09:59:39Z'
+    apis:
+    - api_name: device-identifier
+      api_version: 0.4.0-alpha.1
 - repository: DeviceLocation
   github_url: https://github.com/camaraproject/DeviceLocation
   release_track: meta-release
   meta_release: Sync26
   target_release_tag: r4.1
-  target_release_type: pre-release-alpha
+  target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: geofencing-subscriptions
     target_api_version: 0.6.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - bigludo7
     - jlurien
     - maxl2287
   - api_name: location-retrieval
     target_api_version: 1.0.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - bigludo7
     - jlurien
     - maxl2287
   - api_name: location-verification
     target_api_version: 3.1.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - bigludo7
     - jlurien
@@ -1031,7 +1027,7 @@ progress:
   target_release_tag: r2.1
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.2
+    commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: device-reachability-status-subscriptions
@@ -1435,14 +1431,16 @@ progress:
     - chenfr2-ChinaTelecom
     - XunliYang
     - rkandoi
-  state: snapshot_active
+  state: draft_ready
   artifacts:
     snapshot_branch: release-snapshot/r1.1-c924333
     release_pr:
       number: 40
-      state: open
+      state: closed
       url: https://github.com/camaraproject/IoTDeviceManagement/pull/40
-    draft_release: null
+    draft_release:
+      name: r1.1
+      url: https://github.com/camaraproject/IoTDeviceManagement/releases/tag/untagged-ea0f9175eb29cd2fa4e1
     release_issue:
       number: 38
       url: https://github.com/camaraproject/IoTDeviceManagement/issues/38
@@ -1512,31 +1510,34 @@ progress:
       api_version: 0.1.0-alpha.1
 - repository: IoTSIMFraudPrevention
   github_url: https://github.com/camaraproject/IoTSIMFraudPrevention
-  release_track: independent
-  target_release_tag: r1.2
-  target_release_type: public-release
+  release_track: meta-release
+  meta_release: Sync26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: iot-sim-fraud-prevention
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - chenfr2-ChinaTelecom
     - XunliYang
   - api_name: iot-sim-fraud-prevention-subscriptions
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - chenfr2-ChinaTelecom
     - XunliYang
-  state: published
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 57
+      url: https://github.com/camaraproject/IoTSIMFraudPrevention/issues/57
   published_context:
     latest_public_release: r1.2
     newest_pre_release: null
@@ -1546,55 +1547,38 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r1.1
-      release_date: '2026-04-27T01:17:04Z'
-      apis:
-      - api_name: iot-sim-fraud-prevention
-        api_version: 0.1.0-rc.1
-      - api_name: iot-sim-fraud-prevention-subscriptions
-        api_version: 0.1.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r1.2
-      release_date: '2026-05-28T01:55:36Z'
-      apis:
-      - api_name: iot-sim-fraud-prevention
-        api_version: 0.1.0
-      - api_name: iot-sim-fraud-prevention-subscriptions
-        api_version: 0.1.0
-  last_published:
-    release_tag: r1.2
-    release_date: '2026-05-28T01:55:36Z'
-    apis:
-    - api_name: iot-sim-fraud-prevention
-      api_version: 0.1.0
-    - api_name: iot-sim-fraud-prevention-subscriptions
-      api_version: 0.1.0
-  snapshot_api_versions:
-    iot-sim-fraud-prevention: 0.1.0
-    iot-sim-fraud-prevention-subscriptions: 0.1.0
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: KnowYourCustomerAgeVerification
   github_url: https://github.com/camaraproject/KnowYourCustomerAgeVerification
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.3
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: kyc-age-verification
-    target_api_version: 0.2.1
-    target_api_status: public
+    target_api_version: 0.3.0
+    target_api_status: rc
     main_contacts:
     - ToshiWakayama-KDDI
     - fernandopradocabrillo
     - GillesInnov35
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 45
+      url: https://github.com/camaraproject/KnowYourCustomerAgeVerification/issues/45
   published_context:
     latest_public_release: r1.3
     newest_pre_release: null
@@ -1604,23 +1588,13 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r1.2
-      release_date: '2025-08-12T08:08:24Z'
-      apis:
-      - api_name: kyc-age-verification
-        api_version: 0.2.1-rc.2
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r1.3
-      release_date: '2025-09-14T03:25:04Z'
-      apis:
-      - api_name: kyc-age-verification
-        api_version: 0.2.1
-  last_published:
-    release_tag: r1.3
-    release_date: '2025-09-14T03:25:04Z'
-    apis:
-    - api_name: kyc-age-verification
-      api_version: 0.2.1
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: KnowYourCustomerFill-in
   github_url: https://github.com/camaraproject/KnowYourCustomerFill-in
   release_track: meta-release
@@ -1673,26 +1647,28 @@ progress:
 - repository: KnowYourCustomerMatch
   github_url: https://github.com/camaraproject/KnowYourCustomerMatch
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: kyc-match
-    target_api_version: 0.4.0
-    target_api_status: public
+    target_api_version: 0.5.0
+    target_api_status: rc
     main_contacts:
     - ToshiWakayama-KDDI
     - fernandopradocabrillo
     - GillesInnov35
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 79
+      url: https://github.com/camaraproject/KnowYourCustomerMatch/issues/79
   published_context:
     latest_public_release: r1.2
     newest_pre_release: null
@@ -1702,23 +1678,13 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r1.1
-      release_date: '2025-07-22T09:51:48Z'
-      apis:
-      - api_name: kyc-match
-        api_version: 0.4.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r1.2
-      release_date: '2025-09-14T03:35:29Z'
-      apis:
-      - api_name: kyc-match
-        api_version: 0.4.0
-  last_published:
-    release_tag: r1.2
-    release_date: '2025-09-14T03:35:29Z'
-    apis:
-    - api_name: kyc-match
-      api_version: 0.4.0
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: ModelAsAService
   github_url: https://github.com/camaraproject/ModelAsAService
   release_track: meta-release
@@ -1823,8 +1789,8 @@ progress:
   target_release_tag: r1.1
   target_release_type: pre-release-alpha
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: multi-point-vpn
     target_api_version: 0.1.0
@@ -1832,13 +1798,10 @@ progress:
     main_contacts:
     - abd-abhisek
     - hemantagogoi-infy
-  state: snapshot_active
+  state: planned
   artifacts:
-    snapshot_branch: release-snapshot/r1.1-528ba29
-    release_pr:
-      number: 28
-      state: open
-      url: https://github.com/camaraproject/MultiPointVPN/pull/28
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
     release_issue:
       number: 22
@@ -1859,8 +1822,6 @@ progress:
       release_tag: null
       release_date: null
       apis: []
-  snapshot_api_versions:
-    multi-point-vpn: 0.1.0-alpha.1
 - repository: NetworkAccessManagement
   github_url: https://github.com/camaraproject/NetworkAccessManagement
   release_track: meta-release
@@ -1922,10 +1883,13 @@ progress:
     target_api_status: public
     main_contacts:
     - cnzj-Gc
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r1.3-101e5d3
+    release_pr:
+      number: 80
+      state: open
+      url: https://github.com/camaraproject/NetworkInsights/pull/80
     draft_release: null
     release_issue:
       number: 61
@@ -1962,6 +1926,9 @@ progress:
       api_version: 0.1.0-rc.1
     - api_name: network-traffic-analysis
       api_version: 0.1.0-rc.1
+  snapshot_api_versions:
+    network-health-assessment: 0.1.0
+    network-traffic-analysis: 0.1.0
 - repository: NetworkSliceBooking
   github_url: https://github.com/camaraproject/NetworkSliceBooking
   release_track: meta-release
@@ -2030,26 +1997,28 @@ progress:
 - repository: NumberRecycling
   github_url: https://github.com/camaraproject/NumberRecycling
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r2.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r3.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: number-recycling
-    target_api_version: 0.2.0
-    target_api_status: public
+    target_api_version: 0.3.0
+    target_api_status: rc
     main_contacts:
     - eric-murray
     - Masa8106
     - grgpapadopoulos
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 100
+      url: https://github.com/camaraproject/NumberRecycling/issues/100
   published_context:
     latest_public_release: r2.2
     newest_pre_release: null
@@ -2059,29 +2028,19 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r2.1
-      release_date: '2025-07-28T17:59:55Z'
-      apis:
-      - api_name: number-recycling
-        api_version: 0.2.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r2.2
-      release_date: '2025-09-11T11:13:24Z'
-      apis:
-      - api_name: number-recycling
-        api_version: 0.2.0
-  last_published:
-    release_tag: r2.2
-    release_date: '2025-09-11T11:13:24Z'
-    apis:
-    - api_name: number-recycling
-      api_version: 0.2.0
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: NumberVerification
   github_url: https://github.com/camaraproject/NumberVerification
   release_track: meta-release
   meta_release: Sync26
   target_release_tag: r4.1
-  target_release_type: none
+  target_release_type: pre-release-alpha
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
@@ -2093,12 +2052,14 @@ progress:
     - bigludo7
     - fernandopradocabrillo
     - AxelNennker
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 236
+      url: https://github.com/camaraproject/NumberVerification/issues/236
   published_context:
     latest_public_release: r3.2
     newest_pre_release: null
@@ -2212,26 +2173,28 @@ progress:
 - repository: PopulationDensityData
   github_url: https://github.com/camaraproject/PopulationDensityData
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r3.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r4.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: population-density-data
-    target_api_version: 0.3.0
-    target_api_status: public
+    target_api_version: 1.0.0
+    target_api_status: rc
     main_contacts:
     - sachinvodafone
     - jgarciahospital
     - maheshc01
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 125
+      url: https://github.com/camaraproject/PopulationDensityData/issues/125
   published_context:
     latest_public_release: r3.2
     newest_pre_release: null
@@ -2241,45 +2204,37 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r3.1
-      release_date: '2025-07-29T08:25:07Z'
-      apis:
-      - api_name: population-density-data
-        api_version: 0.3.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r3.2
-      release_date: '2025-09-10T08:54:28Z'
-      apis:
-      - api_name: population-density-data
-        api_version: 0.3.0
-  last_published:
-    release_tag: r3.2
-    release_date: '2025-09-10T08:54:28Z'
-    apis:
-    - api_name: population-density-data
-      api_version: 0.3.0
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: PredictiveConnectivityData
   github_url: https://github.com/camaraproject/PredictiveConnectivityData
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: predictive-connectivity-data
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - eric-murray
     - albertoramosmonagas
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 56
+      url: https://github.com/camaraproject/PredictiveConnectivityData/issues/56
   published_context:
     latest_public_release: r1.2
     newest_pre_release: null
@@ -2289,23 +2244,13 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r1.1
-      release_date: '2025-07-24T08:21:30Z'
-      apis:
-      - api_name: predictive-connectivity-data
-        api_version: 0.1.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r1.2
-      release_date: '2025-09-16T14:08:33Z'
-      apis:
-      - api_name: predictive-connectivity-data
-        api_version: 0.1.0
-  last_published:
-    release_tag: r1.2
-    release_date: '2025-09-16T14:08:33Z'
-    apis:
-    - api_name: predictive-connectivity-data
-      api_version: 0.1.0
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: QoSBooking
   github_url: https://github.com/camaraproject/QoSBooking
   release_track: meta-release
@@ -2360,7 +2305,7 @@ progress:
   target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.3
-    identity_consent_management_release: r4.1
+    identity_consent_management_release: r4.2
   apis:
   - api_name: qos-profiles
     target_api_version: 1.2.0
@@ -2603,26 +2548,28 @@ progress:
 - repository: SimpleEdgeDiscovery
   github_url: https://github.com/camaraproject/SimpleEdgeDiscovery
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r2.3
-  target_release_type: maintenance-release
+  meta_release: Sync26
+  target_release_tag: r3.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: simple-edge-discovery
-    target_api_version: 2.0.1
-    target_api_status: public
+    target_api_version: 2.1.0
+    target_api_status: rc
     main_contacts:
     - Kevsy
     - JoseMConde
     - maheshc01
-  state: published
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 169
+      url: https://github.com/camaraproject/SimpleEdgeDiscovery/issues/169
   published_context:
     latest_public_release: r2.3
     newest_pre_release: null
@@ -2632,55 +2579,45 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r2.1
-      release_date: '2025-07-22T16:29:30Z'
-      apis:
-      - api_name: simple-edge-discovery
-        api_version: 2.0.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r2.2
-      release_date: '2025-09-17T17:29:46Z'
-      apis:
-      - api_name: simple-edge-discovery
-        api_version: 2.0.0
-  last_published:
-    release_tag: r2.3
-    release_date: '2026-04-23T09:19:18Z'
-    apis:
-    - api_name: simple-edge-discovery
-      api_version: 2.0.1
-  snapshot_api_versions:
-    simple-edge-discovery: 2.0.1
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: SimSwap
   github_url: https://github.com/camaraproject/SimSwap
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r3.3
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r4.1
+  target_release_type: pre-release-alpha
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: sim-swap-subscriptions
-    target_api_version: 0.3.0
-    target_api_status: public
+    target_api_version: 0.4.0
+    target_api_status: alpha
     main_contacts:
     - bigludo7
     - fernandopradocabrillo
     - maxl2287
   - api_name: sim-swap
-    target_api_version: 2.1.0
-    target_api_status: public
+    target_api_version: 2.2.0
+    target_api_status: alpha
     main_contacts:
     - bigludo7
     - fernandopradocabrillo
     - maxl2287
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 270
+      url: https://github.com/camaraproject/SimSwap/issues/270
   published_context:
     latest_public_release: r3.3
     newest_pre_release: null
@@ -2690,29 +2627,13 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r3.1
-      release_date: '2025-07-18T09:52:55Z'
-      apis:
-      - api_name: sim-swap-subscriptions
-        api_version: 0.3.0-rc.1
-      - api_name: sim-swap
-        api_version: 2.1.0-rc.2
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r3.2
-      release_date: '2025-09-17T15:10:21Z'
-      apis:
-      - api_name: sim-swap-subscriptions
-        api_version: 0.3.0
-      - api_name: sim-swap
-        api_version: 2.1.0
-  last_published:
-    release_tag: r3.3
-    release_date: '2025-12-01T10:30:21Z'
-    apis:
-    - api_name: sim-swap-subscriptions
-      api_version: 0.3.0
-    - api_name: sim-swap
-      api_version: 2.1.0
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: SponsoredData
   github_url: https://github.com/camaraproject/SponsoredData
   release_track: independent
@@ -2752,27 +2673,29 @@ progress:
 - repository: SubscriptionStatus
   github_url: https://github.com/camaraproject/SubscriptionStatus
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.0
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: subscription-status
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - chinaunicomyangfan
     - ClownsAlbert
     - ChuanyuChen
     - DanXu-ChinaTelecom
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 32
+      url: https://github.com/camaraproject/SubscriptionStatus/issues/32
   published_context:
     latest_public_release: r1.2
     newest_pre_release: null
@@ -2782,47 +2705,42 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r1.1
-      release_date: '2025-07-24T07:59:09Z'
-      apis:
-      - api_name: subscription-status
-        api_version: 0.1.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r1.2
-      release_date: '2025-09-15T07:00:03Z'
-      apis:
-      - api_name: subscription-status
-        api_version: 0.1.0
-  last_published:
-    release_tag: r1.2
-    release_date: '2025-09-15T07:00:03Z'
-    apis:
-    - api_name: subscription-status
-      api_version: 0.1.0
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: Tenure
   github_url: https://github.com/camaraproject/Tenure
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r2.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r3.1
+  target_release_type: pre-release-alpha
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: kyc-tenure
-    target_api_version: 0.2.0
-    target_api_status: public
+    target_api_version: 0.3.0
+    target_api_status: alpha
     main_contacts:
     - eric-murray
     - GillesInnov35
     - grgpapadopoulos
     - fernandopradocabrillo
-  state: not_planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r3.1-2030fcc
+    release_pr:
+      number: 77
+      state: open
+      url: https://github.com/camaraproject/Tenure/pull/77
     draft_release: null
-    release_issue: null
+    release_issue:
+      number: 74
+      url: https://github.com/camaraproject/Tenure/issues/74
   published_context:
     latest_public_release: r2.2
     newest_pre_release: null
@@ -2832,23 +2750,15 @@ progress:
       release_date: null
       apis: []
     m3:
-      release_tag: r2.1
-      release_date: '2025-07-17T10:37:29Z'
-      apis:
-      - api_name: kyc-tenure
-        api_version: 0.2.0-rc.1
+      release_tag: null
+      release_date: null
+      apis: []
     m4:
-      release_tag: r2.2
-      release_date: '2025-09-19T12:07:15Z'
-      apis:
-      - api_name: kyc-tenure
-        api_version: 0.2.0
-  last_published:
-    release_tag: r2.2
-    release_date: '2025-09-19T12:07:15Z'
-    apis:
-    - api_name: kyc-tenure
-      api_version: 0.2.0
+      release_tag: null
+      release_date: null
+      apis: []
+  snapshot_api_versions:
+    kyc-tenure: 0.3.0-alpha.1
 - repository: TrafficInfluence
   github_url: https://github.com/camaraproject/TrafficInfluence
   release_track: meta-release
@@ -3056,10 +2966,13 @@ progress:
     - pradeepachar-mavenir
     - deepakjaiswal1
     - teikuran
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r3.1-a9f1a4b
+    release_pr:
+      number: 176
+      state: open
+      url: https://github.com/camaraproject/WebRTC/pull/176
     draft_release: null
     release_issue:
       number: 155
@@ -3080,6 +2993,10 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    webrtc-call-handling: 0.4.0-rc.1
+    webrtc-events: 0.3.0-rc.1
+    webrtc-registration: 0.4.0-rc.1
 - repository: BlockchainPublicAddress
   github_url: https://github.com/camaraproject/BlockchainPublicAddress
   release_track: meta-release
@@ -3727,6 +3644,62 @@ progress:
     - api_name: dedicated-network-profiles
       api_version: 0.1.0
     - api_name: dedicated-network
+      api_version: 0.1.0
+  source: historical
+- repository: DeviceDataVolume
+  github_url: https://github.com/camaraproject/DeviceDataVolume
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: device-data-volume-subscriptions
+    target_api_version: 0.1.0
+    target_api_status: ''
+  - api_name: device-data-volume
+    target_api_version: 0.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: r1.1
+      release_date: '2025-01-16T16:32:33Z'
+      apis:
+      - api_name: device-data-volume-subscriptions
+        api_version: 0.1.0-alpha.1
+      - api_name: device-data-volume
+        api_version: 0.1.0-alpha.1
+    m3:
+      release_tag: r1.2
+      release_date: '2025-07-25T14:22:52Z'
+      apis:
+      - api_name: device-data-volume-subscriptions
+        api_version: 0.1.0-rc.1
+      - api_name: device-data-volume
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.3
+      release_date: '2025-09-12T09:19:47Z'
+      apis:
+      - api_name: device-data-volume-subscriptions
+        api_version: 0.1.0
+      - api_name: device-data-volume
+        api_version: 0.1.0
+  last_published:
+    release_tag: r1.3
+    release_date: '2025-09-12T09:19:47Z'
+    apis:
+    - api_name: device-data-volume-subscriptions
+      api_version: 0.1.0
+    - api_name: device-data-volume
       api_version: 0.1.0
   source: historical
 - repository: DeviceIdentifier
@@ -4390,6 +4363,57 @@ progress:
     - api_name: home-devices-qod
       api_version: 0.4.0
   source: historical
+- repository: IoTSIMFraudPrevention
+  github_url: https://github.com/camaraproject/IoTSIMFraudPrevention
+  release_track: independent
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: iot-sim-fraud-prevention
+    target_api_version: 0.1.0
+    target_api_status: ''
+  - api_name: iot-sim-fraud-prevention-subscriptions
+    target_api_version: 0.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2026-04-27T01:17:04Z'
+      apis:
+      - api_name: iot-sim-fraud-prevention
+        api_version: 0.1.0-rc.1
+      - api_name: iot-sim-fraud-prevention-subscriptions
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2026-05-28T01:55:36Z'
+      apis:
+      - api_name: iot-sim-fraud-prevention
+        api_version: 0.1.0
+      - api_name: iot-sim-fraud-prevention-subscriptions
+        api_version: 0.1.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2026-05-28T01:55:36Z'
+    apis:
+    - api_name: iot-sim-fraud-prevention
+      api_version: 0.1.0
+    - api_name: iot-sim-fraud-prevention-subscriptions
+      api_version: 0.1.0
+  source: historical
 - repository: KnowYourCustomer
   github_url: ''
   release_track: meta-release
@@ -4502,6 +4526,92 @@ progress:
       api_version: 0.3.0
     - api_name: kyc-match
       api_version: 0.3.0
+  source: historical
+- repository: KnowYourCustomerAgeVerification
+  github_url: https://github.com/camaraproject/KnowYourCustomerAgeVerification
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: kyc-age-verification
+    target_api_version: 0.2.1
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.2
+      release_date: '2025-08-12T08:08:24Z'
+      apis:
+      - api_name: kyc-age-verification
+        api_version: 0.2.1-rc.2
+    m4:
+      release_tag: r1.3
+      release_date: '2025-09-14T03:25:04Z'
+      apis:
+      - api_name: kyc-age-verification
+        api_version: 0.2.1
+  last_published:
+    release_tag: r1.3
+    release_date: '2025-09-14T03:25:04Z'
+    apis:
+    - api_name: kyc-age-verification
+      api_version: 0.2.1
+  source: historical
+- repository: KnowYourCustomerMatch
+  github_url: https://github.com/camaraproject/KnowYourCustomerMatch
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: kyc-match
+    target_api_version: 0.4.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-22T09:51:48Z'
+      apis:
+      - api_name: kyc-match
+        api_version: 0.4.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-14T03:35:29Z'
+      apis:
+      - api_name: kyc-match
+        api_version: 0.4.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2025-09-14T03:35:29Z'
+    apis:
+    - api_name: kyc-match
+      api_version: 0.4.0
   source: historical
 - repository: ModelAsAService
   github_url: https://github.com/camaraproject/ModelAsAService
@@ -4688,6 +4798,49 @@ progress:
     apis:
     - api_name: network-slice-booking
       api_version: 0.1.0
+  source: historical
+- repository: NumberRecycling
+  github_url: https://github.com/camaraproject/NumberRecycling
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: number-recycling
+    target_api_version: 0.2.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r2.1
+      release_date: '2025-07-28T17:59:55Z'
+      apis:
+      - api_name: number-recycling
+        api_version: 0.2.0-rc.1
+    m4:
+      release_tag: r2.2
+      release_date: '2025-09-11T11:13:24Z'
+      apis:
+      - api_name: number-recycling
+        api_version: 0.2.0
+  last_published:
+    release_tag: r2.2
+    release_date: '2025-09-11T11:13:24Z'
+    apis:
+    - api_name: number-recycling
+      api_version: 0.2.0
   source: historical
 - repository: NumberRecycling
   github_url: https://github.com/camaraproject/NumberRecycling
@@ -5036,6 +5189,49 @@ progress:
 - repository: PopulationDensityData
   github_url: https://github.com/camaraproject/PopulationDensityData
   release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: population-density-data
+    target_api_version: 0.3.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r3.1
+      release_date: '2025-07-29T08:25:07Z'
+      apis:
+      - api_name: population-density-data
+        api_version: 0.3.0-rc.1
+    m4:
+      release_tag: r3.2
+      release_date: '2025-09-10T08:54:28Z'
+      apis:
+      - api_name: population-density-data
+        api_version: 0.3.0
+  last_published:
+    release_tag: r3.2
+    release_date: '2025-09-10T08:54:28Z'
+    apis:
+    - api_name: population-density-data
+      api_version: 0.3.0
+  source: historical
+- repository: PopulationDensityData
+  github_url: https://github.com/camaraproject/PopulationDensityData
+  release_track: meta-release
   meta_release: Spring25
   target_release_tag: null
   target_release_type: null
@@ -5075,6 +5271,49 @@ progress:
     apis:
     - api_name: population-density-data
       api_version: 0.2.0
+  source: historical
+- repository: PredictiveConnectivityData
+  github_url: https://github.com/camaraproject/PredictiveConnectivityData
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: predictive-connectivity-data
+    target_api_version: 0.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-24T08:21:30Z'
+      apis:
+      - api_name: predictive-connectivity-data
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-16T14:08:33Z'
+      apis:
+      - api_name: predictive-connectivity-data
+        api_version: 0.1.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2025-09-16T14:08:33Z'
+    apis:
+    - api_name: predictive-connectivity-data
+      api_version: 0.1.0
   source: historical
 - repository: QoSBooking
   github_url: https://github.com/camaraproject/QoSBooking
@@ -5445,6 +5684,58 @@ progress:
 - repository: SimSwap
   github_url: https://github.com/camaraproject/SimSwap
   release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: sim-swap-subscriptions
+    target_api_version: 0.3.0
+    target_api_status: ''
+  - api_name: sim-swap
+    target_api_version: 2.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r3.1
+      release_date: '2025-07-18T09:52:55Z'
+      apis:
+      - api_name: sim-swap-subscriptions
+        api_version: 0.3.0-rc.1
+      - api_name: sim-swap
+        api_version: 2.1.0-rc.2
+    m4:
+      release_tag: r3.2
+      release_date: '2025-09-17T15:10:21Z'
+      apis:
+      - api_name: sim-swap-subscriptions
+        api_version: 0.3.0
+      - api_name: sim-swap
+        api_version: 2.1.0
+  last_published:
+    release_tag: r3.3
+    release_date: '2025-12-01T10:30:21Z'
+    apis:
+    - api_name: sim-swap-subscriptions
+      api_version: 0.3.0
+    - api_name: sim-swap
+      api_version: 2.1.0
+  source: historical
+- repository: SimSwap
+  github_url: https://github.com/camaraproject/SimSwap
+  release_track: meta-release
   meta_release: Spring25
   target_release_tag: null
   target_release_type: null
@@ -5536,6 +5827,135 @@ progress:
     apis:
     - api_name: simple-edge-discovery
       api_version: 1.0.0
+  source: historical
+- repository: SimpleEdgeDiscovery
+  github_url: https://github.com/camaraproject/SimpleEdgeDiscovery
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: simple-edge-discovery
+    target_api_version: 2.0.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r2.1
+      release_date: '2025-07-22T16:29:30Z'
+      apis:
+      - api_name: simple-edge-discovery
+        api_version: 2.0.0-rc.1
+    m4:
+      release_tag: r2.2
+      release_date: '2025-09-17T17:29:46Z'
+      apis:
+      - api_name: simple-edge-discovery
+        api_version: 2.0.0
+  last_published:
+    release_tag: r2.3
+    release_date: '2026-04-23T09:19:18Z'
+    apis:
+    - api_name: simple-edge-discovery
+      api_version: 2.0.1
+  source: historical
+- repository: SubscriptionStatus
+  github_url: https://github.com/camaraproject/SubscriptionStatus
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: subscription-status
+    target_api_version: 0.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-24T07:59:09Z'
+      apis:
+      - api_name: subscription-status
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-15T07:00:03Z'
+      apis:
+      - api_name: subscription-status
+        api_version: 0.1.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2025-09-15T07:00:03Z'
+    apis:
+    - api_name: subscription-status
+      api_version: 0.1.0
+  source: historical
+- repository: Tenure
+  github_url: https://github.com/camaraproject/Tenure
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: kyc-tenure
+    target_api_version: 0.2.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r2.1
+      release_date: '2025-07-17T10:37:29Z'
+      apis:
+      - api_name: kyc-tenure
+        api_version: 0.2.0-rc.1
+    m4:
+      release_tag: r2.2
+      release_date: '2025-09-19T12:07:15Z'
+      apis:
+      - api_name: kyc-tenure
+        api_version: 0.2.0
+  last_published:
+    release_tag: r2.2
+    release_date: '2025-09-19T12:07:15Z'
+    apis:
+    - api_name: kyc-tenure
+      api_version: 0.2.0
   source: historical
 - repository: Tenure
   github_url: https://github.com/camaraproject/Tenure
