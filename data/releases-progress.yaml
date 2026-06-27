@@ -1,14 +1,14 @@
 metadata:
-  last_updated: '2026-06-19T08:43:44Z'
-  last_checked: '2026-06-19T08:43:44Z'
-  releases_master_updated: '2026-06-12T07:07:44.598Z'
+  last_updated: '2026-06-27T06:40:28Z'
+  last_checked: '2026-06-27T06:40:28Z'
+  releases_master_updated: '2026-06-25T06:34:24.297Z'
   schema_version: 1.5.0
   collector_version: 1.5.0
-  repos_scanned: 62
+  repos_scanned: 61
   repos_new: 0
-  repos_with_plan: 62
-  repos_fully_onboarded: 39
-  repos_with_release_issue: 37
+  repos_with_plan: 61
+  repos_fully_onboarded: 37
+  repos_with_release_issue: 34
 meta_releases:
 - name: Fall24
   total_apis: 25
@@ -26,12 +26,12 @@ meta_releases:
   m3_achieved: 35
   m4_achieved: 36
 - name: Spring26
-  total_apis: 2
-  m1_achieved: 0
-  m3_achieved: 2
-  m4_achieved: 2
+  total_apis: 3
+  m1_achieved: 1
+  m3_achieved: 3
+  m4_achieved: 3
 - name: Sync26
-  total_apis: 51
+  total_apis: 52
   m1_achieved: 6
   m3_achieved: 0
   m4_achieved: 0
@@ -424,10 +424,13 @@ progress:
     - YadingFang
     - Wojiaozhenghao
     - XunliYang
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.1-7b347a9
+    release_pr:
+      number: 112
+      state: open
+      url: https://github.com/camaraproject/ClickToDial/pull/112
     draft_release: null
     release_issue:
       number: 109
@@ -448,6 +451,8 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    click-to-dial: 0.2.0-rc.1
 - repository: ConnectedNetworkType
   github_url: https://github.com/camaraproject/ConnectedNetworkType
   release_track: meta-release
@@ -1197,8 +1202,7 @@ progress:
       apis: []
 - repository: EdgeApplicationManagement
   github_url: https://github.com/camaraproject/EdgeApplicationManagement
-  release_track: meta-release
-  meta_release: Sync26
+  release_track: independent
   target_release_tag: r1.2
   target_release_type: pre-release-rc
   dependencies:
@@ -1214,11 +1218,11 @@ progress:
     - Kevsy
   state: snapshot_active
   artifacts:
-    snapshot_branch: release-snapshot/r1.2-e3c2aff
+    snapshot_branch: release-snapshot/r1.2-1b54865
     release_pr:
-      number: 40
+      number: 42
       state: open
-      url: https://github.com/camaraproject/EdgeApplicationManagement/pull/40
+      url: https://github.com/camaraproject/EdgeApplicationManagement/pull/42
     draft_release: null
     release_issue:
       number: 39
@@ -1307,7 +1311,7 @@ progress:
     commonalities_release: r3.4
     identity_consent_management_release: r3.3
   apis:
-  - api_name: placeholder-entry
+  - api_name: esim-remote-management
     target_api_version: 0.1.0
     target_api_status: draft
     main_contacts:
@@ -1816,27 +1820,41 @@ progress:
   release_track: meta-release
   meta_release: Sync26
   target_release_tag: r3.1
-  target_release_type: pre-release-rc
+  target_release_type: none
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: network-access-management
     target_api_version: 0.3.0
-    target_api_status: rc
+    target_api_status: draft
     main_contacts:
     - caubut-charter
     - mayur007
     - clundie-CL
     - benhepworth
-  state: planned
+  - api_name: network-access-devices
+    target_api_version: 0.3.0
+    target_api_status: draft
+    main_contacts:
+    - caubut-charter
+    - mayur007
+    - clundie-CL
+    - benhepworth
+  - api_name: network-access-domains
+    target_api_version: 0.3.0
+    target_api_status: draft
+    main_contacts:
+    - caubut-charter
+    - mayur007
+    - clundie-CL
+    - benhepworth
+  state: not_planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 146
-      url: https://github.com/camaraproject/NetworkAccessManagement/issues/146
+    release_issue: null
   published_context:
     latest_public_release: null
     newest_pre_release: r2.1
@@ -1872,20 +1890,15 @@ progress:
     target_api_status: public
     main_contacts:
     - cnzj-Gc
-  state: snapshot_active
+  state: published
   artifacts:
-    snapshot_branch: release-snapshot/r1.3-101e5d3
-    release_pr:
-      number: 80
-      state: open
-      url: https://github.com/camaraproject/NetworkInsights/pull/80
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
-    release_issue:
-      number: 61
-      url: https://github.com/camaraproject/NetworkInsights/issues/61
+    release_issue: null
   published_context:
-    latest_public_release: null
-    newest_pre_release: r1.2
+    latest_public_release: r1.3
+    newest_pre_release: null
   cycle_releases:
     m1:
       release_tag: r1.1
@@ -1904,17 +1917,21 @@ progress:
       - api_name: network-traffic-analysis
         api_version: 0.1.0-rc.1
     m4:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r1.3
+      release_date: '2026-06-25T00:45:46Z'
+      apis:
+      - api_name: network-health-assessment
+        api_version: 0.1.0
+      - api_name: network-traffic-analysis
+        api_version: 0.1.0
   last_published:
-    release_tag: r1.2
-    release_date: '2026-05-22T03:21:06Z'
+    release_tag: r1.3
+    release_date: '2026-06-25T00:45:46Z'
     apis:
     - api_name: network-health-assessment
-      api_version: 0.1.0-rc.1
+      api_version: 0.1.0
     - api_name: network-traffic-analysis
-      api_version: 0.1.0-rc.1
+      api_version: 0.1.0
   snapshot_api_versions:
     network-health-assessment: 0.1.0
     network-traffic-analysis: 0.1.0
@@ -2000,10 +2017,13 @@ progress:
     - eric-murray
     - Masa8106
     - grgpapadopoulos
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r3.1-410f552
+    release_pr:
+      number: 104
+      state: open
+      url: https://github.com/camaraproject/NumberRecycling/pull/104
     draft_release: null
     release_issue:
       number: 103
@@ -2024,6 +2044,8 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    number-recycling: 0.3.0-rc.1
 - repository: NumberVerification
   github_url: https://github.com/camaraproject/NumberVerification
   release_track: meta-release
@@ -2245,20 +2267,20 @@ progress:
   release_track: meta-release
   meta_release: Sync26
   target_release_tag: r2.1
-  target_release_type: pre-release-alpha
+  target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: qos-booking-and-assignment
     target_api_version: 0.2.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - Masa8106
     - jlurien
   - api_name: qos-booking
     target_api_version: 0.2.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - Masa8106
     - jlurien
@@ -2429,70 +2451,6 @@ progress:
     apis:
     - api_name: region-device-count
       api_version: 0.2.0
-- repository: ReleaseTest
-  github_url: https://github.com/camaraproject/ReleaseTest
-  release_track: independent
-  target_release_tag: r1.3
-  target_release_type: pre-release-alpha
-  dependencies:
-    commonalities_release: r4.3
-    identity_consent_management_release: r4.2
-  apis:
-  - api_name: sample-service
-    target_api_version: 0.1.0
-    target_api_status: alpha
-    main_contacts:
-    - hdamker-bot
-  - api_name: sample-service-subscriptions
-    target_api_version: 0.1.0
-    target_api_status: alpha
-    main_contacts:
-    - hdamker-bot
-  - api_name: sample-implicit-events
-    target_api_version: 0.1.0
-    target_api_status: alpha
-    main_contacts:
-    - hdamker-bot
-  state: planned
-  artifacts:
-    snapshot_branch: null
-    release_pr: null
-    draft_release: null
-    release_issue:
-      number: 202
-      url: https://github.com/camaraproject/ReleaseTest/issues/202
-  published_context:
-    latest_public_release: null
-    newest_pre_release: r1.2
-  cycle_releases:
-    m1:
-      release_tag: r1.1
-      release_date: '2026-05-29T13:39:43Z'
-      apis:
-      - api_name: sample-service
-        api_version: 0.1.0-alpha.1
-      - api_name: sample-service-subscriptions
-        api_version: 0.1.0-alpha.1
-      - api_name: sample-implicit-events
-        api_version: 0.1.0-alpha.1
-    m3:
-      release_tag: null
-      release_date: null
-      apis: []
-    m4:
-      release_tag: null
-      release_date: null
-      apis: []
-  last_published:
-    release_tag: r1.2
-    release_date: '2026-06-06T15:47:36Z'
-    apis:
-    - api_name: sample-service
-      api_version: 0.1.0-alpha.2
-    - api_name: sample-service-subscriptions
-      api_version: 0.1.0-alpha.2
-    - api_name: sample-implicit-events
-      api_version: 0.1.0-alpha.2
 - repository: SessionInsights
   github_url: https://github.com/camaraproject/SessionInsights
   release_track: meta-release
@@ -2510,10 +2468,13 @@ progress:
     - benhepworth
     - maheshc01
     - kevsy
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.1-fb4a91c
+    release_pr:
+      number: 102
+      state: open
+      url: https://github.com/camaraproject/SessionInsights/pull/102
     draft_release: null
     release_issue:
       number: 100
@@ -2534,6 +2495,8 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    session-insights: 0.2.0-rc.1
 - repository: SimpleEdgeDiscovery
   github_url: https://github.com/camaraproject/SimpleEdgeDiscovery
   release_track: meta-release
@@ -2705,39 +2668,38 @@ progress:
   github_url: https://github.com/camaraproject/Tenure
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r3.1
-  target_release_type: pre-release-alpha
+  target_release_tag: r3.2
+  target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: kyc-tenure
     target_api_version: 0.3.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - eric-murray
     - GillesInnov35
     - grgpapadopoulos
     - fernandopradocabrillo
-  state: snapshot_active
+  state: planned
   artifacts:
-    snapshot_branch: release-snapshot/r3.1-2030fcc
-    release_pr:
-      number: 77
-      state: open
-      url: https://github.com/camaraproject/Tenure/pull/77
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
     release_issue:
-      number: 74
-      url: https://github.com/camaraproject/Tenure/issues/74
+      number: 84
+      url: https://github.com/camaraproject/Tenure/issues/84
   published_context:
     latest_public_release: r2.2
-    newest_pre_release: null
+    newest_pre_release: r3.1
   cycle_releases:
     m1:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.1
+      release_date: '2026-06-23T12:07:05Z'
+      apis:
+      - api_name: kyc-tenure
+        api_version: 0.3.0-alpha.1
     m3:
       release_tag: null
       release_date: null
@@ -2746,8 +2708,12 @@ progress:
       release_tag: null
       release_date: null
       apis: []
-  snapshot_api_versions:
-    kyc-tenure: 0.3.0-alpha.1
+  last_published:
+    release_tag: r3.1
+    release_date: '2026-06-23T12:07:05Z'
+    apis:
+    - api_name: kyc-tenure
+      api_version: 0.3.0-alpha.1
 - repository: TrafficInfluence
   github_url: https://github.com/camaraproject/TrafficInfluence
   release_track: meta-release
@@ -2825,10 +2791,13 @@ progress:
     - olsi-korkuti
     - stroncoso-quobis
     - GillesInnov35
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.1-f41f679
+    release_pr:
+      number: 120
+      state: open
+      url: https://github.com/camaraproject/VerifiedCaller/pull/120
     draft_release: null
     release_issue:
       number: 110
@@ -2849,6 +2818,9 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    brand-registration: 0.2.0-alpha.1
+    verified-caller: 0.2.0-alpha.1
 - repository: VoiceNotification
   github_url: https://github.com/camaraproject/VoiceNotification
   release_track: independent
@@ -3221,7 +3193,8 @@ progress:
   source: historical
 - repository: ClickToDial
   github_url: https://github.com/camaraproject/ClickToDial
-  release_track: independent
+  release_track: meta-release
+  meta_release: Spring26
   target_release_tag: null
   target_release_type: null
   apis:
