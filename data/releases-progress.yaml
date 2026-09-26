@@ -1,14 +1,14 @@
 metadata:
-  last_updated: '2026-06-19T08:43:44Z'
-  last_checked: '2026-06-19T08:43:44Z'
-  releases_master_updated: '2026-06-12T07:07:44.598Z'
-  schema_version: 1.5.0
-  collector_version: 1.5.0
-  repos_scanned: 62
+  last_updated: '2026-09-26T08:43:21Z'
+  last_checked: '2026-09-26T08:43:21Z'
+  releases_master_updated: '2026-09-18T07:36:17.416Z'
+  schema_version: 1.7.0
+  collector_version: 1.7.0
+  repos_scanned: 63
   repos_new: 0
-  repos_with_plan: 62
-  repos_fully_onboarded: 39
-  repos_with_release_issue: 37
+  repos_with_plan: 63
+  repos_fully_onboarded: 46
+  repos_with_release_issue: 0
 meta_releases:
 - name: Fall24
   total_apis: 25
@@ -26,29 +26,29 @@ meta_releases:
   m3_achieved: 35
   m4_achieved: 36
 - name: Spring26
-  total_apis: 2
-  m1_achieved: 0
-  m3_achieved: 2
-  m4_achieved: 2
+  total_apis: 3
+  m1_achieved: 1
+  m3_achieved: 3
+  m4_achieved: 3
 - name: Sync26
-  total_apis: 51
-  m1_achieved: 6
-  m3_achieved: 0
+  total_apis: 59
+  m1_achieved: 8
+  m3_achieved: 47
   m4_achieved: 0
 progress:
 - repository: ApplicationEndpointDiscovery
   github_url: https://github.com/camaraproject/ApplicationEndpointDiscovery
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: application-endpoint-discovery
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - gunjald
     - Kevsy
@@ -58,51 +58,57 @@ progress:
     - gainsley
     - JoseMConde
     - maheshc01
-  state: not_planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history:
+      discarded_count: 2
+      last_reviewers:
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/ApplicationEndpointDiscovery/pull/50
+      last_closed_at: '2026-09-11T17:48:37Z'
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: r1.1
-      release_date: '2025-07-24T10:18:04Z'
+      release_tag: r2.1
+      release_date: '2026-09-16T13:16:44Z'
       apis:
       - api_name: application-endpoint-discovery
-        api_version: 0.1.0-rc.1
+        api_version: 0.2.0-rc.1
     m4:
-      release_tag: r1.2
-      release_date: '2025-09-16T19:23:11Z'
-      apis:
-      - api_name: application-endpoint-discovery
-        api_version: 0.1.0
+      release_tag: null
+      release_date: null
+      apis: []
   last_published:
-    release_tag: r1.2
-    release_date: '2025-09-16T19:23:11Z'
+    release_tag: r2.1
+    release_date: '2026-09-16T13:16:44Z'
     apis:
     - api_name: application-endpoint-discovery
-      api_version: 0.1.0
+      api_version: 0.2.0-rc.1
+  snapshot_api_versions:
+    application-endpoint-discovery: 0.2.0-rc.1
 - repository: ApplicationEndpointRegistration
   github_url: https://github.com/camaraproject/ApplicationEndpointRegistration
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.2
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
   apis:
   - api_name: application-endpoint-registration
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - gunjald
     - Kevsy
@@ -112,87 +118,85 @@ progress:
     - gainsley
     - JoseMConde
     - maheshc01
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: r1.1
-      release_date: '2025-07-31T09:55:23Z'
+      release_tag: r2.1
+      release_date: '2026-08-20T02:02:26Z'
       apis:
       - api_name: application-endpoint-registration
-        api_version: 0.1.0-rc.1
+        api_version: 0.2.0-rc.1
     m4:
-      release_tag: r1.2
-      release_date: '2025-09-17T09:17:03Z'
-      apis:
-      - api_name: application-endpoint-registration
-        api_version: 0.1.0
+      release_tag: null
+      release_date: null
+      apis: []
   last_published:
-    release_tag: r1.2
-    release_date: '2025-09-17T09:17:03Z'
+    release_tag: r2.1
+    release_date: '2026-08-20T02:02:26Z'
     apis:
     - api_name: application-endpoint-registration
-      api_version: 0.1.0
+      api_version: 0.2.0-rc.1
 - repository: ApplicationProfiles
   github_url: https://github.com/camaraproject/ApplicationProfiles
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.2
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
   apis:
   - api_name: application-profiles
-    target_api_version: 0.5.0
-    target_api_status: public
+    target_api_version: 0.6.0
+    target_api_status: rc
     main_contacts:
     - maheshc01
     - Kevsy
     - urvika-v
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: r1.1
-      release_date: '2025-07-29T16:08:11Z'
+      release_tag: r2.1
+      release_date: '2026-08-19T23:33:53Z'
       apis:
       - api_name: application-profiles
-        api_version: 0.5.0-rc.1
+        api_version: 0.6.0-rc.1
     m4:
-      release_tag: r1.2
-      release_date: '2025-09-17T15:37:44Z'
-      apis:
-      - api_name: application-profiles
-        api_version: 0.5.0
+      release_tag: null
+      release_date: null
+      apis: []
   last_published:
-    release_tag: r1.2
-    release_date: '2025-09-17T15:37:44Z'
+    release_tag: r2.1
+    release_date: '2026-08-19T23:33:53Z'
     apis:
     - api_name: application-profiles
-      api_version: 0.5.0
+      api_version: 0.6.0-rc.1
 - repository: BlockchainPublicAddress
   github_url: https://github.com/camaraproject/BlockchainPublicAddress
   release_track: meta-release
@@ -225,6 +229,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.2
     newest_pre_release: null
@@ -260,54 +265,58 @@ progress:
 - repository: CallForwardingSignal
   github_url: https://github.com/camaraproject/CallForwardingSignal
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r3.3
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r4.1
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.3
+    identity_consent_management_release: r4.2
   apis:
   - api_name: call-forwarding-signal
-    target_api_version: 0.4.0
-    target_api_status: public
+    target_api_version: 0.5.0
+    target_api_status: rc
     main_contacts:
     - FabrizioMoggio
     - bigludo7
     - chinaunicomyangfan
-  state: not_planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - eric-murray
+      last_pr_url: https://github.com/camaraproject/CallForwardingSignal/pull/231
+      last_closed_at: '2026-09-16T10:54:48Z'
   published_context:
     latest_public_release: r3.3
-    newest_pre_release: null
+    newest_pre_release: r4.1
   cycle_releases:
     m1:
-      release_tag: r3.1
-      release_date: '2025-06-16T09:51:19Z'
-      apis:
-      - api_name: call-forwarding-signal
-        api_version: 0.4.0-alpha.1
+      release_tag: null
+      release_date: null
+      apis: []
     m3:
-      release_tag: r3.2
-      release_date: '2025-07-16T21:31:41Z'
+      release_tag: r4.1
+      release_date: '2026-09-17T16:03:57Z'
       apis:
       - api_name: call-forwarding-signal
-        api_version: 0.4.0-rc.1
+        api_version: 0.5.0-rc.1
     m4:
-      release_tag: r3.3
-      release_date: '2025-09-16T14:38:30Z'
-      apis:
-      - api_name: call-forwarding-signal
-        api_version: 0.4.0
+      release_tag: null
+      release_date: null
+      apis: []
   last_published:
-    release_tag: r3.3
-    release_date: '2025-09-16T14:38:30Z'
+    release_tag: r4.1
+    release_date: '2026-09-17T16:03:57Z'
     apis:
     - api_name: call-forwarding-signal
-      api_version: 0.4.0
+      api_version: 0.5.0-rc.1
+  snapshot_api_versions:
+    call-forwarding-signal: 0.5.0-rc.1
 - repository: CapabilitiesAndRuntimeRestrictions
   github_url: https://github.com/camaraproject/CapabilitiesAndRuntimeRestrictions
   release_track: independent
@@ -329,6 +338,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -375,6 +385,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r3.2
     newest_pre_release: null
@@ -411,10 +422,10 @@ progress:
   github_url: https://github.com/camaraproject/ClickToDial
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: click-to-dial
@@ -424,38 +435,47 @@ progress:
     - YadingFang
     - Wojiaozhenghao
     - XunliYang
-  state: planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 109
-      url: https://github.com/camaraproject/ClickToDial/issues/109
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.4
-    newest_pre_release: null
+    newest_pre_release: r2.2
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-07-15T03:28:17Z'
+      apis:
+      - api_name: click-to-dial
+        api_version: 0.2.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.2
+    release_date: '2026-09-15T02:34:18Z'
+    apis:
+    - api_name: click-to-dial
+      api_version: 0.2.0-rc.2
+  snapshot_api_versions:
+    click-to-dial: 0.2.0-rc.2
 - repository: ConnectedNetworkType
   github_url: https://github.com/camaraproject/ConnectedNetworkType
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: connected-network-type-subscriptions
@@ -479,33 +499,44 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 57
-      url: https://github.com/camaraproject/ConnectedNetworkType/issues/57
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-08-11T15:01:59Z'
+      apis:
+      - api_name: connected-network-type-subscriptions
+        api_version: 0.3.0-rc.1
+      - api_name: connected-network-type
+        api_version: 0.3.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-08-11T15:01:59Z'
+    apis:
+    - api_name: connected-network-type-subscriptions
+      api_version: 0.3.0-rc.1
+    - api_name: connected-network-type
+      api_version: 0.3.0-rc.1
 - repository: ConnectivityInsights
   github_url: https://github.com/camaraproject/ConnectivityInsights
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r4.1
+  target_release_tag: r4.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: connectivity-insights-subscriptions
@@ -527,25 +558,36 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 191
-      url: https://github.com/camaraproject/ConnectivityInsights/issues/191
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r3.2
-    newest_pre_release: null
+    newest_pre_release: r4.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r4.1
+      release_date: '2026-08-20T22:39:16Z'
+      apis:
+      - api_name: connectivity-insights-subscriptions
+        api_version: 0.7.0-rc.1
+      - api_name: connectivity-insights
+        api_version: 0.7.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r4.1
+    release_date: '2026-08-20T22:39:16Z'
+    apis:
+    - api_name: connectivity-insights-subscriptions
+      api_version: 0.7.0-rc.1
+    - api_name: connectivity-insights
+      api_version: 0.7.0-rc.1
 - repository: ConsentInfo
   github_url: https://github.com/camaraproject/ConsentInfo
   release_track: independent
@@ -568,6 +610,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.3
     newest_pre_release: null
@@ -612,17 +655,21 @@ progress:
     - jpengar
     - AxelNennker
     - sebdewet
-  state: planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 34
-      url: https://github.com/camaraproject/ConsentManagement/issues/34
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - hdamker
+      last_pr_url: https://github.com/camaraproject/ConsentManagement/pull/35
+      last_closed_at: '2026-07-22T10:29:13Z'
   published_context:
-    latest_public_release: null
-    newest_pre_release: r1.1
+    latest_public_release: r1.2
+    newest_pre_release: null
   cycle_releases:
     m1:
       release_tag: null
@@ -635,23 +682,27 @@ progress:
       - api_name: consent-management
         api_version: 0.1.0-rc.1
     m4:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r1.2
+      release_date: '2026-07-31T07:19:13Z'
+      apis:
+      - api_name: consent-management
+        api_version: 0.1.0
   last_published:
-    release_tag: r1.1
-    release_date: '2026-06-03T07:09:49Z'
+    release_tag: r1.2
+    release_date: '2026-07-31T07:19:13Z'
     apis:
     - api_name: consent-management
-      api_version: 0.1.0-rc.1
+      api_version: 0.1.0
+  snapshot_api_versions:
+    consent-management: 0.1.0
 - repository: CustomerInsights
   github_url: https://github.com/camaraproject/CustomerInsights
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r3.1
+  target_release_tag: r3.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: customer-insights
@@ -666,33 +717,40 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 73
-      url: https://github.com/camaraproject/CustomerInsights/issues/73
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.2
-    newest_pre_release: null
+    newest_pre_release: r3.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.1
+      release_date: '2026-07-23T16:06:40Z'
+      apis:
+      - api_name: customer-insights
+        api_version: 0.3.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r3.1
+    release_date: '2026-07-23T16:06:40Z'
+    apis:
+    - api_name: customer-insights
+      api_version: 0.3.0-rc.1
 - repository: DedicatedNetworks
   github_url: https://github.com/camaraproject/DedicatedNetworks
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.2
+  target_release_tag: r2.3
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: dedicated-network-accesses
@@ -732,12 +790,11 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 116
-      url: https://github.com/camaraproject/DedicatedNetworks/issues/116
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: r2.1
+    newest_pre_release: r2.2
   cycle_releases:
     m1:
       release_tag: r2.1
@@ -752,25 +809,33 @@ progress:
       - api_name: dedicated-network-areas
         api_version: 0.1.0-alpha.1
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.2
+      release_date: '2026-09-16T19:09:08Z'
+      apis:
+      - api_name: dedicated-network-accesses
+        api_version: 0.2.0-rc.1
+      - api_name: dedicated-network-profiles
+        api_version: 0.2.0-rc.1
+      - api_name: dedicated-network
+        api_version: 0.2.0-rc.1
+      - api_name: dedicated-network-areas
+        api_version: 0.1.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
   last_published:
-    release_tag: r2.1
-    release_date: '2026-05-26T09:40:59Z'
+    release_tag: r2.2
+    release_date: '2026-09-16T19:09:08Z'
     apis:
     - api_name: dedicated-network-accesses
-      api_version: 0.2.0-alpha.1
+      api_version: 0.2.0-rc.1
     - api_name: dedicated-network-profiles
-      api_version: 0.2.0-alpha.1
+      api_version: 0.2.0-rc.1
     - api_name: dedicated-network
-      api_version: 0.2.0-alpha.1
+      api_version: 0.2.0-rc.1
     - api_name: dedicated-network-areas
-      api_version: 0.1.0-alpha.1
+      api_version: 0.1.0-rc.1
 - repository: DeviceAuthenticity
   github_url: https://github.com/camaraproject/DeviceAuthenticity
   release_track: independent
@@ -792,6 +857,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -815,7 +881,7 @@ progress:
   target_release_tag: r2.1
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: device-data-volume-subscriptions
@@ -830,33 +896,46 @@ progress:
     main_contacts:
     - maxl2287
     - sachinvodafone
-  state: snapshot_active
+  state: published
   artifacts:
-    snapshot_branch: release-snapshot/r2.1-14c3473
-    release_pr:
-      number: 86
-      state: open
-      url: https://github.com/camaraproject/DeviceDataVolume/pull/86
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
-    release_issue:
-      number: 80
-      url: https://github.com/camaraproject/DeviceDataVolume/issues/80
+    release_issue: null
+    review_history:
+      discarded_count: 2
+      last_reviewers:
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/DeviceDataVolume/pull/108
+      last_closed_at: '2026-09-14T12:09:53Z'
   published_context:
     latest_public_release: r1.3
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-09-16T12:46:52Z'
+      apis:
+      - api_name: device-data-volume-subscriptions
+        api_version: 0.2.0-rc.1
+      - api_name: device-data-volume
+        api_version: 0.2.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-09-16T12:46:52Z'
+    apis:
+    - api_name: device-data-volume-subscriptions
+      api_version: 0.2.0-rc.1
+    - api_name: device-data-volume
+      api_version: 0.2.0-rc.1
   snapshot_api_versions:
     device-data-volume-subscriptions: 0.2.0-rc.1
     device-data-volume: 0.2.0-rc.1
@@ -864,10 +943,10 @@ progress:
   github_url: https://github.com/camaraproject/DeviceIdentifier
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r3.2
+  target_release_tag: r3.3
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: device-identifier
@@ -876,17 +955,16 @@ progress:
     main_contacts:
     - eric-murray
     - Kevsy
-  state: planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 176
-      url: https://github.com/camaraproject/DeviceIdentifier/issues/176
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.2
-    newest_pre_release: r3.1
+    newest_pre_release: r3.2
   cycle_releases:
     m1:
       release_tag: r3.1
@@ -895,27 +973,36 @@ progress:
       - api_name: device-identifier
         api_version: 0.4.0-alpha.1
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.2
+      release_date: '2026-09-01T16:11:38Z'
+      apis:
+      - api_name: device-identifier
+        api_version: 0.4.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
   last_published:
-    release_tag: r3.1
-    release_date: '2026-06-11T09:59:39Z'
+    release_tag: r3.2
+    release_date: '2026-09-01T16:11:38Z'
     apis:
     - api_name: device-identifier
-      api_version: 0.4.0-alpha.1
+      api_version: 0.4.0-rc.1
+  snapshot_api_versions:
+    device-identifier: 0.4.0-rc.2
+  warnings:
+  - code: W003
+    message: Release r3.3 has been published. Milestone data will be updated in the
+      next 24 hours.
+    severity: warning
 - repository: DeviceLocation
   github_url: https://github.com/camaraproject/DeviceLocation
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r4.1
+  target_release_tag: r4.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: geofencing-subscriptions
@@ -944,32 +1031,47 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 404
-      url: https://github.com/camaraproject/DeviceLocation/issues/404
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r3.2
-    newest_pre_release: null
+    newest_pre_release: r4.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r4.1
+      release_date: '2026-09-01T08:31:47Z'
+      apis:
+      - api_name: geofencing-subscriptions
+        api_version: 0.6.0-rc.1
+      - api_name: location-retrieval
+        api_version: 1.0.0-rc.1
+      - api_name: location-verification
+        api_version: 3.1.0-rc.2
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r4.1
+    release_date: '2026-09-01T08:31:47Z'
+    apis:
+    - api_name: geofencing-subscriptions
+      api_version: 0.6.0-rc.1
+    - api_name: location-retrieval
+      api_version: 1.0.0-rc.1
+    - api_name: location-verification
+      api_version: 3.1.0-rc.2
 - repository: DeviceMediaStreamingRate
   github_url: https://github.com/camaraproject/DeviceMediaStreamingRate
   release_track: independent
   target_release_tag: r1.1
   target_release_type: pre-release-alpha
   dependencies:
-    commonalities_release: r4.2
+    commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: media-streaming-rate
@@ -979,25 +1081,28 @@ progress:
     - maxl2287
     - sachinvodafone
     - maheshc01
-  state: snapshot_active
+  state: published
   artifacts:
-    snapshot_branch: release-snapshot/r1.1-b4cc622
-    release_pr:
-      number: 28
-      state: open
-      url: https://github.com/camaraproject/DeviceMediaStreamingRate/pull/28
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
-    release_issue:
-      number: 26
-      url: https://github.com/camaraproject/DeviceMediaStreamingRate/issues/26
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/DeviceMediaStreamingRate/pull/28
+      last_closed_at: '2026-07-17T14:00:21Z'
   published_context:
     latest_public_release: null
-    newest_pre_release: null
+    newest_pre_release: r1.1
   cycle_releases:
     m1:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r1.1
+      release_date: '2026-09-01T10:22:49Z'
+      apis:
+      - api_name: media-streaming-rate
+        api_version: 0.1.0-alpha.1
     m3:
       release_tag: null
       release_date: null
@@ -1006,16 +1111,22 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r1.1
+    release_date: '2026-09-01T10:22:49Z'
+    apis:
+    - api_name: media-streaming-rate
+      api_version: 0.1.0-alpha.1
   snapshot_api_versions:
     media-streaming-rate: 0.1.0-alpha.1
 - repository: DeviceReachabilityStatus
   github_url: https://github.com/camaraproject/DeviceReachabilityStatus
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: device-reachability-status-subscriptions
@@ -1039,33 +1150,44 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 62
-      url: https://github.com/camaraproject/DeviceReachabilityStatus/issues/62
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-08-07T10:35:15Z'
+      apis:
+      - api_name: device-reachability-status-subscriptions
+        api_version: 0.9.0-rc.1
+      - api_name: device-reachability-status
+        api_version: 1.2.0-rc.3
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-08-07T10:35:15Z'
+    apis:
+    - api_name: device-reachability-status-subscriptions
+      api_version: 0.9.0-rc.1
+    - api_name: device-reachability-status
+      api_version: 1.2.0-rc.3
 - repository: DeviceRoamingStatus
   github_url: https://github.com/camaraproject/DeviceRoamingStatus
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: device-roaming-status-subscriptions
@@ -1089,74 +1211,102 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 76
-      url: https://github.com/camaraproject/DeviceRoamingStatus/issues/76
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-08-07T09:58:54Z'
+      apis:
+      - api_name: device-roaming-status-subscriptions
+        api_version: 0.9.0-rc.1
+      - api_name: device-roaming-status
+        api_version: 1.2.0-rc.3
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-08-07T09:58:54Z'
+    apis:
+    - api_name: device-roaming-status-subscriptions
+      api_version: 0.9.0-rc.1
+    - api_name: device-roaming-status
+      api_version: 1.2.0-rc.3
 - repository: DeviceSwap
   github_url: https://github.com/camaraproject/DeviceSwap
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r3.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r4.2
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
   apis:
   - api_name: device-swap
-    target_api_version: 1.0.0
-    target_api_status: public
+    target_api_version: 1.1.0
+    target_api_status: rc
     main_contacts:
     - bigludo7
     - krishvenkatachalam
     - jgarciahospital
-  state: not_planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r4.2-836543d
+    release_pr:
+      number: 123
+      state: open
+      url: https://github.com/camaraproject/DeviceSwap/pull/123
+      created_at: '2026-09-23T13:30:36Z'
+      assignees: []
+      review_decision: null
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 0
+      rm_total: 6
     draft_release: null
     release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers: []
+      last_pr_url: https://github.com/camaraproject/DeviceSwap/pull/120
+      last_closed_at: '2026-09-18T11:59:26Z'
   published_context:
     latest_public_release: r3.2
-    newest_pre_release: null
+    newest_pre_release: r4.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: r3.1
-      release_date: '2025-07-23T09:43:47Z'
+      release_tag: r4.1
+      release_date: '2026-09-17T08:26:11Z'
       apis:
       - api_name: device-swap
-        api_version: 1.0.0-rc.1
+        api_version: 1.1.0-rc.2
     m4:
-      release_tag: r3.2
-      release_date: '2025-09-18T11:54:24Z'
-      apis:
-      - api_name: device-swap
-        api_version: 1.0.0
+      release_tag: null
+      release_date: null
+      apis: []
   last_published:
-    release_tag: r3.2
-    release_date: '2025-09-18T11:54:24Z'
+    release_tag: r4.1
+    release_date: '2026-09-17T08:26:11Z'
     apis:
     - api_name: device-swap
-      api_version: 1.0.0
+      api_version: 1.1.0-rc.2
+  snapshot_api_versions:
+    device-swap: 1.1.0-rc.3
 - repository: DeviceVisitLocation
   github_url: https://github.com/camaraproject/DeviceVisitLocation
   release_track: independent
@@ -1179,6 +1329,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1197,12 +1348,11 @@ progress:
       apis: []
 - repository: EdgeApplicationManagement
   github_url: https://github.com/camaraproject/EdgeApplicationManagement
-  release_track: meta-release
-  meta_release: Sync26
+  release_track: independent
   target_release_tag: r1.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: edge-application-management
@@ -1212,17 +1362,18 @@ progress:
     - JoseMConde
     - Seralogar
     - Kevsy
-  state: snapshot_active
+  state: planned
   artifacts:
-    snapshot_branch: release-snapshot/r1.2-e3c2aff
-    release_pr:
-      number: 40
-      state: open
-      url: https://github.com/camaraproject/EdgeApplicationManagement/pull/40
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
-    release_issue:
-      number: 39
-      url: https://github.com/camaraproject/EdgeApplicationManagement/issues/39
+    release_issue: null
+    review_history:
+      discarded_count: 7
+      last_reviewers:
+      - eric-murray
+      last_pr_url: https://github.com/camaraproject/EdgeApplicationManagement/pull/84
+      last_closed_at: '2026-09-24T10:24:28Z'
   published_context:
     latest_public_release: null
     newest_pre_release: r1.1
@@ -1247,8 +1398,6 @@ progress:
     apis:
     - api_name: edge-application-management
       api_version: 0.1.0-alpha.1
-  snapshot_api_versions:
-    edge-application-management: 0.1.0-rc.1
 - repository: EnergyFootprintNotification
   github_url: https://github.com/camaraproject/EnergyFootprintNotification
   release_track: meta-release
@@ -1270,6 +1419,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.3
     newest_pre_release: null
@@ -1302,23 +1452,28 @@ progress:
   github_url: https://github.com/camaraproject/eSimRemoteManagement
   release_track: independent
   target_release_tag: r1.1
-  target_release_type: none
+  target_release_type: pre-release-alpha
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
   apis:
-  - api_name: placeholder-entry
+  - api_name: esim-remote-management
     target_api_version: 0.1.0
-    target_api_status: draft
+    target_api_status: alpha
     main_contacts:
     - SentianSun
     - ChinaUnicomXiaoDongrui
-  state: not_planned
+  state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history:
+      discarded_count: 6
+      last_reviewers: []
+      last_pr_url: https://github.com/camaraproject/eSimRemoteManagement/pull/39
+      last_closed_at: '2026-09-22T02:55:26Z'
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1355,6 +1510,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1391,6 +1547,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1410,51 +1567,55 @@ progress:
 - repository: IoTDeviceManagement
   github_url: https://github.com/camaraproject/IoTDeviceManagement
   release_track: independent
-  target_release_tag: r1.1
-  target_release_type: pre-release-alpha
+  target_release_tag: r1.3
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: esim-profile-management
     target_api_version: 0.1.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - maheshc01
     - chenfr2-ChinaTelecom
     - XunliYang
     - rkandoi
-  state: draft_ready
+  state: published
   artifacts:
-    snapshot_branch: release-snapshot/r1.1-c924333
-    release_pr:
-      number: 40
-      state: closed
-      url: https://github.com/camaraproject/IoTDeviceManagement/pull/40
-    draft_release:
-      name: r1.1
-      url: https://github.com/camaraproject/IoTDeviceManagement/releases/tag/untagged-ea0f9175eb29cd2fa4e1
-    release_issue:
-      number: 38
-      url: https://github.com/camaraproject/IoTDeviceManagement/issues/38
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
-    newest_pre_release: null
+    newest_pre_release: r1.3
   cycle_releases:
     m1:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r1.1
+      release_date: '2026-06-30T07:59:58Z'
+      apis:
+      - api_name: esim-profile-management
+        api_version: 0.1.0-alpha.1
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r1.2
+      release_date: '2026-08-28T05:15:54Z'
+      apis:
+      - api_name: esim-profile-management
+        api_version: 0.1.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r1.3
+    release_date: '2026-09-15T11:13:37Z'
+    apis:
+    - api_name: esim-profile-management
+      api_version: 0.1.0-rc.2
   snapshot_api_versions:
-    esim-profile-management: 0.1.0-alpha.1
+    esim-profile-management: 0.1.0-rc.2
 - repository: IoTNetworkOptimization
   github_url: https://github.com/camaraproject/IoTNetworkOptimization
   release_track: independent
@@ -1477,6 +1638,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: r1.1
@@ -1508,7 +1670,7 @@ progress:
   target_release_tag: r2.1
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: iot-sim-fraud-prevention
@@ -1523,14 +1685,30 @@ progress:
     main_contacts:
     - chenfr2-ChinaTelecom
     - XunliYang
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.1-2c390f7
+    release_pr:
+      number: 78
+      state: open
+      url: https://github.com/camaraproject/IoTSIMFraudPrevention/pull/78
+      created_at: '2026-09-23T06:21:51Z'
+      assignees: []
+      review_decision: null
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 0
+      rm_total: 6
     draft_release: null
-    release_issue:
-      number: 57
-      url: https://github.com/camaraproject/IoTSIMFraudPrevention/issues/57
+    release_issue: null
+    review_history:
+      discarded_count: 5
+      last_reviewers:
+      - eric-murray
+      last_pr_url: https://github.com/camaraproject/IoTSIMFraudPrevention/pull/69
+      last_closed_at: '2026-09-22T08:18:12Z'
   published_context:
     latest_public_release: r1.2
     newest_pre_release: null
@@ -1547,18 +1725,21 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    iot-sim-fraud-prevention: 0.2.0-rc.1
+    iot-sim-fraud-prevention-subscriptions: 0.2.0-rc.1
 - repository: KnowYourCustomerAgeVerification
   github_url: https://github.com/camaraproject/KnowYourCustomerAgeVerification
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: kyc-age-verification
-    target_api_version: 0.3.0
+    target_api_version: 1.0.0
     target_api_status: rc
     main_contacts:
     - ToshiWakayama-KDDI
@@ -1569,25 +1750,32 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 45
-      url: https://github.com/camaraproject/KnowYourCustomerAgeVerification/issues/45
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.3
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-09-01T05:15:38Z'
+      apis:
+      - api_name: kyc-age-verification
+        api_version: 0.3.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-09-01T05:15:38Z'
+    apis:
+    - api_name: kyc-age-verification
+      api_version: 0.3.0-rc.1
 - repository: KnowYourCustomerFill-in
   github_url: https://github.com/camaraproject/KnowYourCustomerFill-in
   release_track: meta-release
@@ -1604,42 +1792,55 @@ progress:
     main_contacts:
     - ToshiWakayama-KDDI
     - GillesInnov35
-  state: planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 54
-      url: https://github.com/camaraproject/KnowYourCustomerFill-in/issues/54
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers: []
+      last_pr_url: https://github.com/camaraproject/KnowYourCustomerFill-in/pull/58
+      last_closed_at: '2026-07-31T14:21:15Z'
   published_context:
     latest_public_release: r1.3
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-09-01T05:11:26Z'
+      apis:
+      - api_name: kyc-fill-in
+        api_version: 0.5.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-09-01T05:11:26Z'
+    apis:
+    - api_name: kyc-fill-in
+      api_version: 0.5.0-rc.1
+  snapshot_api_versions:
+    kyc-fill-in: 0.5.0-rc.1
 - repository: KnowYourCustomerMatch
   github_url: https://github.com/camaraproject/KnowYourCustomerMatch
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: kyc-match
-    target_api_version: 0.5.0
+    target_api_version: 1.0.0
     target_api_status: rc
     main_contacts:
     - ToshiWakayama-KDDI
@@ -1650,25 +1851,32 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 79
-      url: https://github.com/camaraproject/KnowYourCustomerMatch/issues/79
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-09-01T05:04:32Z'
+      apis:
+      - api_name: kyc-match
+        api_version: 0.5.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-09-01T05:04:32Z'
+    apis:
+    - api_name: kyc-match
+      api_version: 0.5.0-rc.1
 - repository: ModelAsAService
   github_url: https://github.com/camaraproject/ModelAsAService
   release_track: meta-release
@@ -1694,30 +1902,55 @@ progress:
     target_api_status: rc
     main_contacts:
     - lihaojie-CMCC
-  state: planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 32
-      url: https://github.com/camaraproject/ModelAsAService/issues/32
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - hdamker
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/ModelAsAService/pull/35
+      last_closed_at: '2026-07-24T06:20:49Z'
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-07-28T01:55:13Z'
+      apis:
+      - api_name: knowledge-base
+        api_version: 0.2.0-rc.1
+      - api_name: qa-assistant-manage
+        api_version: 0.2.0-rc.1
+      - api_name: qa-assistant-service
+        api_version: 0.2.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-07-28T01:55:13Z'
+    apis:
+    - api_name: knowledge-base
+      api_version: 0.2.0-rc.1
+    - api_name: qa-assistant-manage
+      api_version: 0.2.0-rc.1
+    - api_name: qa-assistant-service
+      api_version: 0.2.0-rc.1
+  snapshot_api_versions:
+    knowledge-base: 0.2.0-rc.1
+    qa-assistant-manage: 0.2.0-rc.1
+    qa-assistant-service: 0.2.0-rc.1
 - repository: MostFrequentLocation
   github_url: https://github.com/camaraproject/MostFrequentLocation
   release_track: meta-release
@@ -1741,6 +1974,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.2
     newest_pre_release: null
@@ -1789,10 +2023,23 @@ progress:
       number: 41
       state: open
       url: https://github.com/camaraproject/MultiPointVPN/pull/41
+      created_at: '2026-06-17T09:38:37Z'
+      assignees:
+      - tanjadegroot
+      review_decision: CHANGES_REQUESTED
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 2
+      rm_total: 4
     draft_release: null
-    release_issue:
-      number: 22
-      url: https://github.com/camaraproject/MultiPointVPN/issues/22
+    release_issue: null
+    review_history:
+      discarded_count: 2
+      last_reviewers: []
+      last_pr_url: https://github.com/camaraproject/MultiPointVPN/pull/30
+      last_closed_at: '2026-06-15T13:30:32Z'
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -1821,7 +2068,7 @@ progress:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
-  - api_name: network-access-management
+  - api_name: network-access-devices
     target_api_version: 0.3.0
     target_api_status: rc
     main_contacts:
@@ -1829,95 +2076,141 @@ progress:
     - mayur007
     - clundie-CL
     - benhepworth
-  state: planned
+  - api_name: network-access-domains
+    target_api_version: 0.3.0
+    target_api_status: rc
+    main_contacts:
+    - caubut-charter
+    - mayur007
+    - clundie-CL
+    - benhepworth
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 146
-      url: https://github.com/camaraproject/NetworkAccessManagement/issues/146
+    release_issue: null
+    review_history:
+      discarded_count: 3
+      last_reviewers:
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/NetworkAccessManagement/pull/164
+      last_closed_at: '2026-07-24T11:06:28Z'
   published_context:
     latest_public_release: null
-    newest_pre_release: r2.1
+    newest_pre_release: r3.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
-    m4:
-      release_tag: null
-      release_date: null
-      apis: []
-- repository: NetworkInsights
-  github_url: https://github.com/camaraproject/NetworkInsights
-  release_track: independent
-  target_release_tag: r1.3
-  target_release_type: public-release
-  dependencies:
-    commonalities_release: r4.3
-    identity_consent_management_release: r4.2
-  apis:
-  - api_name: network-health-assessment
-    target_api_version: 0.1.0
-    target_api_status: public
-    main_contacts:
-    - cnzj-Gc
-  - api_name: network-traffic-analysis
-    target_api_version: 0.1.0
-    target_api_status: public
-    main_contacts:
-    - cnzj-Gc
-  state: snapshot_active
-  artifacts:
-    snapshot_branch: release-snapshot/r1.3-101e5d3
-    release_pr:
-      number: 80
-      state: open
-      url: https://github.com/camaraproject/NetworkInsights/pull/80
-    draft_release: null
-    release_issue:
-      number: 61
-      url: https://github.com/camaraproject/NetworkInsights/issues/61
-  published_context:
-    latest_public_release: null
-    newest_pre_release: r1.2
-  cycle_releases:
-    m1:
-      release_tag: r1.1
-      release_date: '2026-04-16T01:13:01Z'
+      release_tag: r3.1
+      release_date: '2026-07-24T17:11:46Z'
       apis:
-      - api_name: network-health-assessment
-        api_version: 0.1.0-alpha.1
-      - api_name: network-traffic-analysis
-        api_version: 0.1.0-alpha.1
-    m3:
-      release_tag: r1.2
-      release_date: '2026-05-22T03:21:06Z'
-      apis:
-      - api_name: network-health-assessment
-        api_version: 0.1.0-rc.1
-      - api_name: network-traffic-analysis
-        api_version: 0.1.0-rc.1
+      - api_name: network-access-devices
+        api_version: 0.3.0-rc.1
+      - api_name: network-access-domains
+        api_version: 0.3.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
   last_published:
-    release_tag: r1.2
-    release_date: '2026-05-22T03:21:06Z'
+    release_tag: r3.1
+    release_date: '2026-07-24T17:11:46Z'
     apis:
-    - api_name: network-health-assessment
-      api_version: 0.1.0-rc.1
-    - api_name: network-traffic-analysis
-      api_version: 0.1.0-rc.1
+    - api_name: network-access-devices
+      api_version: 0.3.0-rc.1
+    - api_name: network-access-domains
+      api_version: 0.3.0-rc.1
   snapshot_api_versions:
-    network-health-assessment: 0.1.0
-    network-traffic-analysis: 0.1.0
+    network-access-devices: 0.3.0-rc.1
+    network-access-domains: 0.3.0-rc.1
+- repository: NetworkInsights
+  github_url: https://github.com/camaraproject/NetworkInsights
+  release_track: meta-release
+  meta_release: Sync26
+  target_release_tag: r2.1
+  target_release_type: pre-release-rc
+  dependencies:
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
+  apis:
+  - api_name: network-health-assessment
+    target_api_version: 0.2.0
+    target_api_status: rc
+    main_contacts:
+    - cnzj-Gc
+  - api_name: network-traffic-analysis
+    target_api_version: 0.2.0
+    target_api_status: rc
+    main_contacts:
+    - cnzj-Gc
+  state: planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - hdamker
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/NetworkInsights/pull/89
+      last_closed_at: '2026-08-27T06:24:24Z'
+  published_context:
+    latest_public_release: r1.3
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: null
+      release_date: null
+      apis: []
+    m4:
+      release_tag: null
+      release_date: null
+      apis: []
+- repository: NetworkServiceAreas
+  github_url: https://github.com/camaraproject/NetworkServiceAreas
+  release_track: independent
+  target_release_tag: r1.1
+  target_release_type: none
+  dependencies:
+    commonalities_release: r4.1
+    identity_consent_management_release: r4.1
+  apis:
+  - api_name: placeholder-entry
+    target_api_version: 0.1.0
+    target_api_status: draft
+  state: not_planned
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: null
+      release_date: null
+      apis: []
+    m4:
+      release_tag: null
+      release_date: null
+      apis: []
 - repository: NetworkSliceBooking
   github_url: https://github.com/camaraproject/NetworkSliceBooking
   release_track: meta-release
@@ -1948,6 +2241,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.3
     newest_pre_release: null
@@ -1987,10 +2281,10 @@ progress:
   github_url: https://github.com/camaraproject/NumberRecycling
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r3.1
+  target_release_tag: r3.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: number-recycling
@@ -2005,50 +2299,74 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 103
-      url: https://github.com/camaraproject/NumberRecycling/issues/103
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.2
-    newest_pre_release: null
+    newest_pre_release: r3.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.1
+      release_date: '2026-09-03T19:08:44Z'
+      apis:
+      - api_name: number-recycling
+        api_version: 0.3.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r3.1
+    release_date: '2026-09-03T19:08:44Z'
+    apis:
+    - api_name: number-recycling
+      api_version: 0.3.0-rc.1
 - repository: NumberVerification
   github_url: https://github.com/camaraproject/NumberVerification
   release_track: meta-release
   meta_release: Sync26
   target_release_tag: r4.1
-  target_release_type: pre-release-alpha
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: number-verification
     target_api_version: 2.1.1
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - bigludo7
     - fernandopradocabrillo
     - AxelNennker
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r4.1-baeb5e4
+    release_pr:
+      number: 262
+      state: open
+      url: https://github.com/camaraproject/NumberVerification/pull/262
+      created_at: '2026-09-21T15:46:08Z'
+      assignees:
+      - tanjadegroot
+      review_decision: APPROVED
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 6
+      rm_total: 6
     draft_release: null
-    release_issue:
-      number: 236
-      url: https://github.com/camaraproject/NumberVerification/issues/236
+    release_issue: null
+    review_history:
+      discarded_count: 4
+      last_reviewers:
+      - hdamker
+      last_pr_url: https://github.com/camaraproject/NumberVerification/pull/258
+      last_closed_at: '2026-09-21T15:43:29Z'
   published_context:
     latest_public_release: r3.2
     newest_pre_release: null
@@ -2065,19 +2383,21 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    number-verification: 2.1.1-rc.2
 - repository: OptimalEdgeDiscovery
   github_url: https://github.com/camaraproject/OptimalEdgeDiscovery
   release_track: meta-release
-  meta_release: Fall25
-  target_release_tag: r1.2
-  target_release_type: none
+  meta_release: Sync26
+  target_release_tag: r2.2
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r3.4
-    identity_consent_management_release: r3.3
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
   apis:
   - api_name: optimal-edge-discovery
-    target_api_version: 0.1.0
-    target_api_status: public
+    target_api_version: 0.2.0
+    target_api_status: rc
     main_contacts:
     - gunjald
     - Kevsy
@@ -2087,86 +2407,112 @@ progress:
     - gainsley
     - JoseMConde
     - maheshc01
-  state: not_planned
-  artifacts:
-    snapshot_branch: null
-    release_pr: null
-    draft_release: null
-    release_issue: null
-  published_context:
-    latest_public_release: r1.2
-    newest_pre_release: null
-  cycle_releases:
-    m1:
-      release_tag: null
-      release_date: null
-      apis: []
-    m3:
-      release_tag: r1.1
-      release_date: '2025-07-30T16:41:18Z'
-      apis:
-      - api_name: optimal-edge-discovery
-        api_version: 0.1.0-rc.1
-    m4:
-      release_tag: r1.2
-      release_date: '2025-09-17T15:32:16Z'
-      apis:
-      - api_name: optimal-edge-discovery
-        api_version: 0.1.0
-  last_published:
-    release_tag: r1.2
-    release_date: '2025-09-17T15:32:16Z'
-    apis:
-    - api_name: optimal-edge-discovery
-      api_version: 0.1.0
-- repository: OTPValidation
-  github_url: https://github.com/camaraproject/OTPValidation
-  release_track: meta-release
-  meta_release: Sync26
-  target_release_tag: r4.1
-  target_release_type: pre-release-alpha
-  dependencies:
-    commonalities_release: r4.3
-    identity_consent_management_release: r4.2
-  apis:
-  - api_name: one-time-password-sms
-    target_api_version: 2.0.0
-    target_api_status: alpha
-    main_contacts:
-    - bigludo7
-    - fernandopradocabrillo
   state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 138
-      url: https://github.com/camaraproject/OTPValidation/issues/138
+    release_issue: null
+    review_history: null
   published_context:
-    latest_public_release: r3.2
-    newest_pre_release: null
+    latest_public_release: r1.2
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-09-10T20:04:23Z'
+      apis:
+      - api_name: optimal-edge-discovery
+        api_version: 0.2.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-09-10T20:04:23Z'
+    apis:
+    - api_name: optimal-edge-discovery
+      api_version: 0.2.0-rc.1
+- repository: OTPValidation
+  github_url: https://github.com/camaraproject/OTPValidation
+  release_track: meta-release
+  meta_release: Sync26
+  target_release_tag: r4.2
+  target_release_type: pre-release-rc
+  dependencies:
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
+  apis:
+  - api_name: one-time-password-sms
+    target_api_version: 2.0.0
+    target_api_status: rc
+    main_contacts:
+    - bigludo7
+    - fernandopradocabrillo
+  state: snapshot_active
+  artifacts:
+    snapshot_branch: release-snapshot/r4.2-f9dd76c
+    release_pr:
+      number: 164
+      state: open
+      url: https://github.com/camaraproject/OTPValidation/pull/164
+      created_at: '2026-09-21T15:02:50Z'
+      assignees:
+      - hdamker
+      review_decision: CHANGES_REQUESTED
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 5
+      rm_total: 6
+    draft_release: null
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - hdamker
+      last_pr_url: https://github.com/camaraproject/OTPValidation/pull/160
+      last_closed_at: '2026-09-21T14:57:35Z'
+  published_context:
+    latest_public_release: r3.2
+    newest_pre_release: r4.1
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r4.1
+      release_date: '2026-09-15T13:33:35Z'
+      apis:
+      - api_name: one-time-password-sms
+        api_version: 2.0.0-rc.1
+    m4:
+      release_tag: null
+      release_date: null
+      apis: []
+  last_published:
+    release_tag: r4.1
+    release_date: '2026-09-15T13:33:35Z'
+    apis:
+    - api_name: one-time-password-sms
+      api_version: 2.0.0-rc.1
+  snapshot_api_versions:
+    one-time-password-sms: 2.0.0-rc.2
 - repository: PopulationDensityData
   github_url: https://github.com/camaraproject/PopulationDensityData
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r4.1
+  target_release_tag: r4.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: population-density-data
@@ -2176,38 +2522,64 @@ progress:
     - sachinvodafone
     - jgarciahospital
     - maheshc01
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r4.2-4c74bc6
+    release_pr:
+      number: 150
+      state: open
+      url: https://github.com/camaraproject/PopulationDensityData/pull/150
+      created_at: '2026-09-23T11:11:45Z'
+      assignees: []
+      review_decision: null
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 0
+      rm_total: 6
     draft_release: null
-    release_issue:
-      number: 125
-      url: https://github.com/camaraproject/PopulationDensityData/issues/125
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/PopulationDensityData/pull/148
+      last_closed_at: '2026-09-23T09:26:01Z'
   published_context:
     latest_public_release: r3.2
-    newest_pre_release: null
+    newest_pre_release: r4.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r4.1
+      release_date: '2026-08-11T10:11:52Z'
+      apis:
+      - api_name: population-density-data
+        api_version: 1.0.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r4.1
+    release_date: '2026-08-11T10:11:52Z'
+    apis:
+    - api_name: population-density-data
+      api_version: 1.0.0-rc.1
+  snapshot_api_versions:
+    population-density-data: 1.0.0-rc.2
 - repository: PredictiveConnectivityData
   github_url: https://github.com/camaraproject/PredictiveConnectivityData
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: predictive-connectivity-data
@@ -2221,57 +2593,124 @@ progress:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 56
-      url: https://github.com/camaraproject/PredictiveConnectivityData/issues/56
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
-    newest_pre_release: null
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-08-11T09:54:02Z'
+      apis:
+      - api_name: predictive-connectivity-data
+        api_version: 0.2.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-08-11T09:54:02Z'
+    apis:
+    - api_name: predictive-connectivity-data
+      api_version: 0.2.0-rc.1
 - repository: QoSBooking
   github_url: https://github.com/camaraproject/QoSBooking
   release_track: meta-release
   meta_release: Sync26
   target_release_tag: r2.1
-  target_release_type: pre-release-alpha
+  target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: qos-booking-and-assignment
     target_api_version: 0.2.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - Masa8106
     - jlurien
   - api_name: qos-booking
     target_api_version: 0.2.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - Masa8106
+    - jlurien
+  state: published
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history:
+      discarded_count: 1
+      last_reviewers:
+      - tanjadegroot
+      last_pr_url: https://github.com/camaraproject/QoSBooking/pull/109
+      last_closed_at: '2026-08-12T06:17:12Z'
+  published_context:
+    latest_public_release: r1.2
+    newest_pre_release: r2.1
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r2.1
+      release_date: '2026-08-28T16:58:33Z'
+      apis:
+      - api_name: qos-booking-and-assignment
+        api_version: 0.2.0-rc.1
+      - api_name: qos-booking
+        api_version: 0.2.0-rc.1
+    m4:
+      release_tag: null
+      release_date: null
+      apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-08-28T16:58:33Z'
+    apis:
+    - api_name: qos-booking-and-assignment
+      api_version: 0.2.0-rc.1
+    - api_name: qos-booking
+      api_version: 0.2.0-rc.1
+  snapshot_api_versions:
+    qos-booking-and-assignment: 0.2.0-rc.1
+    qos-booking: 0.2.0-rc.1
+- repository: QoSProfiles
+  github_url: https://github.com/camaraproject/QoSProfiles
+  release_track: meta-release
+  meta_release: Sync26
+  target_release_tag: r1.1
+  target_release_type: pre-release-rc
+  dependencies:
+    commonalities_release: r4.4
+    identity_consent_management_release: r4.2
+  apis:
+  - api_name: qos-profiles
+    target_api_version: 1.2.0
+    target_api_status: rc
+    main_contacts:
+    - hdamker
+    - eric-murray
+    - benhepworth
     - jlurien
   state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 94
-      url: https://github.com/camaraproject/QoSBooking/issues/94
+    release_issue: null
+    review_history: null
   published_context:
-    latest_public_release: r1.2
+    latest_public_release: null
     newest_pre_release: null
   cycle_releases:
     m1:
@@ -2290,27 +2729,19 @@ progress:
   github_url: https://github.com/camaraproject/QualityOnDemand
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r4.1
+  target_release_tag: r4.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
-  - api_name: qos-profiles
-    target_api_version: 1.2.0
-    target_api_status: rc
-    main_contacts:
-    - hdamker
-    - eric-murray
-    - RandyLevensalor
-    - jlurien
   - api_name: qos-provisioning
     target_api_version: 0.4.0
     target_api_status: rc
     main_contacts:
     - hdamker
     - eric-murray
-    - RandyLevensalor
+    - benhepworth
     - jlurien
   - api_name: quality-on-demand
     target_api_version: 1.2.0
@@ -2318,32 +2749,47 @@ progress:
     main_contacts:
     - hdamker
     - eric-murray
-    - RandyLevensalor
+    - benhepworth
     - jlurien
   state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 567
-      url: https://github.com/camaraproject/QualityOnDemand/issues/567
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r3.2
-    newest_pre_release: null
+    newest_pre_release: r4.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r4.1
+      release_date: '2026-08-20T10:09:32Z'
+      apis:
+      - api_name: qos-profiles
+        api_version: 1.2.0-rc.3
+      - api_name: qos-provisioning
+        api_version: 0.4.0-rc.1
+      - api_name: quality-on-demand
+        api_version: 1.2.0-rc.3
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r4.1
+    release_date: '2026-08-20T10:09:32Z'
+    apis:
+    - api_name: qos-profiles
+      api_version: 1.2.0-rc.3
+    - api_name: qos-provisioning
+      api_version: 0.4.0-rc.1
+    - api_name: quality-on-demand
+      api_version: 1.2.0-rc.3
 - repository: RainfallIntensity
   github_url: https://github.com/camaraproject/RainfallIntensity
   release_track: independent
@@ -2364,6 +2810,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -2403,6 +2850,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.2
     newest_pre_release: null
@@ -2429,78 +2877,14 @@ progress:
     apis:
     - api_name: region-device-count
       api_version: 0.2.0
-- repository: ReleaseTest
-  github_url: https://github.com/camaraproject/ReleaseTest
-  release_track: independent
-  target_release_tag: r1.3
-  target_release_type: pre-release-alpha
-  dependencies:
-    commonalities_release: r4.3
-    identity_consent_management_release: r4.2
-  apis:
-  - api_name: sample-service
-    target_api_version: 0.1.0
-    target_api_status: alpha
-    main_contacts:
-    - hdamker-bot
-  - api_name: sample-service-subscriptions
-    target_api_version: 0.1.0
-    target_api_status: alpha
-    main_contacts:
-    - hdamker-bot
-  - api_name: sample-implicit-events
-    target_api_version: 0.1.0
-    target_api_status: alpha
-    main_contacts:
-    - hdamker-bot
-  state: planned
-  artifacts:
-    snapshot_branch: null
-    release_pr: null
-    draft_release: null
-    release_issue:
-      number: 202
-      url: https://github.com/camaraproject/ReleaseTest/issues/202
-  published_context:
-    latest_public_release: null
-    newest_pre_release: r1.2
-  cycle_releases:
-    m1:
-      release_tag: r1.1
-      release_date: '2026-05-29T13:39:43Z'
-      apis:
-      - api_name: sample-service
-        api_version: 0.1.0-alpha.1
-      - api_name: sample-service-subscriptions
-        api_version: 0.1.0-alpha.1
-      - api_name: sample-implicit-events
-        api_version: 0.1.0-alpha.1
-    m3:
-      release_tag: null
-      release_date: null
-      apis: []
-    m4:
-      release_tag: null
-      release_date: null
-      apis: []
-  last_published:
-    release_tag: r1.2
-    release_date: '2026-06-06T15:47:36Z'
-    apis:
-    - api_name: sample-service
-      api_version: 0.1.0-alpha.2
-    - api_name: sample-service-subscriptions
-      api_version: 0.1.0-alpha.2
-    - api_name: sample-implicit-events
-      api_version: 0.1.0-alpha.2
 - repository: SessionInsights
   github_url: https://github.com/camaraproject/SessionInsights
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
+  target_release_tag: r2.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: session-insights
@@ -2510,38 +2894,59 @@ progress:
     - benhepworth
     - maheshc01
     - kevsy
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.2-9174432
+    release_pr:
+      number: 122
+      state: open
+      url: https://github.com/camaraproject/SessionInsights/pull/122
+      created_at: '2026-09-25T16:26:55Z'
+      assignees: []
+      review_decision: null
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 0
+      rm_total: 6
     draft_release: null
-    release_issue:
-      number: 100
-      url: https://github.com/camaraproject/SessionInsights/issues/100
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
-    newest_pre_release: r1.1
+    newest_pre_release: r2.1
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-08-19T16:29:52Z'
+      apis:
+      - api_name: session-insights
+        api_version: 0.2.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.1
+    release_date: '2026-08-19T16:29:52Z'
+    apis:
+    - api_name: session-insights
+      api_version: 0.2.0-rc.1
+  snapshot_api_versions:
+    session-insights: 0.2.0-rc.2
 - repository: SimpleEdgeDiscovery
   github_url: https://github.com/camaraproject/SimpleEdgeDiscovery
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r3.1
+  target_release_tag: r3.2
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: simple-edge-discovery
@@ -2551,62 +2956,83 @@ progress:
     - Kevsy
     - JoseMConde
     - maheshc01
-  state: planned
+  state: published
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 169
-      url: https://github.com/camaraproject/SimpleEdgeDiscovery/issues/169
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.3
-    newest_pre_release: null
+    newest_pre_release: r3.2
   cycle_releases:
     m1:
       release_tag: null
       release_date: null
       apis: []
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.1
+      release_date: '2026-08-05T13:39:06Z'
+      apis:
+      - api_name: simple-edge-discovery
+        api_version: 2.1.0-rc.2
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r3.2
+    release_date: '2026-09-11T15:03:54Z'
+    apis:
+    - api_name: simple-edge-discovery
+      api_version: 2.1.0-rc.3
+  snapshot_api_versions:
+    simple-edge-discovery: 2.1.0-rc.3
 - repository: SimSwap
   github_url: https://github.com/camaraproject/SimSwap
   release_track: meta-release
   meta_release: Sync26
   target_release_tag: r4.1
-  target_release_type: pre-release-alpha
+  target_release_type: pre-release-rc
   dependencies:
     commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: sim-swap-subscriptions
     target_api_version: 0.4.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - bigludo7
     - fernandopradocabrillo
     - maxl2287
   - api_name: sim-swap
     target_api_version: 2.2.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - bigludo7
     - fernandopradocabrillo
     - maxl2287
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r4.1-7cf4786
+    release_pr:
+      number: 283
+      state: open
+      url: https://github.com/camaraproject/SimSwap/pull/283
+      created_at: '2026-09-03T06:24:24Z'
+      assignees:
+      - hdamker
+      review_decision: CHANGES_REQUESTED
+      codeowner_approved: false
+      codeowner_checked: 3
+      codeowner_total: 3
+      ready_for_review: true
+      rm_checked: 2
+      rm_total: 5
     draft_release: null
-    release_issue:
-      number: 270
-      url: https://github.com/camaraproject/SimSwap/issues/270
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r3.3
     newest_pre_release: null
@@ -2623,6 +3049,9 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    sim-swap-subscriptions: 0.4.0-rc.1
+    sim-swap: 2.2.0-rc.3
 - repository: SponsoredData
   github_url: https://github.com/camaraproject/SponsoredData
   release_track: independent
@@ -2643,6 +3072,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -2677,14 +3107,26 @@ progress:
     - ClownsAlbert
     - ChuanyuChen
     - DanXu-ChinaTelecom
-  state: planned
+  state: snapshot_active
   artifacts:
-    snapshot_branch: null
-    release_pr: null
+    snapshot_branch: release-snapshot/r2.1-9adaaa9
+    release_pr:
+      number: 37
+      state: open
+      url: https://github.com/camaraproject/SubscriptionStatus/pull/37
+      created_at: '2026-08-04T10:46:36Z'
+      assignees:
+      - eric-murray
+      review_decision: APPROVED
+      codeowner_approved: true
+      codeowner_checked: 0
+      codeowner_total: 3
+      ready_for_review: false
+      rm_checked: 5
+      rm_total: 5
     draft_release: null
-    release_issue:
-      number: 34
-      url: https://github.com/camaraproject/SubscriptionStatus/issues/34
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.2
     newest_pre_release: null
@@ -2701,53 +3143,59 @@ progress:
       release_tag: null
       release_date: null
       apis: []
+  snapshot_api_versions:
+    subscription-status: 0.2.0-rc.1
 - repository: Tenure
   github_url: https://github.com/camaraproject/Tenure
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r3.1
-  target_release_type: pre-release-alpha
+  target_release_tag: r3.3
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: kyc-tenure
     target_api_version: 0.3.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - eric-murray
     - GillesInnov35
     - grgpapadopoulos
     - fernandopradocabrillo
-  state: snapshot_active
+  state: planned
   artifacts:
-    snapshot_branch: release-snapshot/r3.1-2030fcc
-    release_pr:
-      number: 77
-      state: open
-      url: https://github.com/camaraproject/Tenure/pull/77
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
-    release_issue:
-      number: 74
-      url: https://github.com/camaraproject/Tenure/issues/74
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r2.2
-    newest_pre_release: null
+    newest_pre_release: r3.2
   cycle_releases:
     m1:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.1
+      release_date: '2026-06-23T12:07:05Z'
+      apis:
+      - api_name: kyc-tenure
+        api_version: 0.3.0-alpha.1
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r3.2
+      release_date: '2026-08-11T08:25:04Z'
+      apis:
+      - api_name: kyc-tenure
+        api_version: 0.3.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
-  snapshot_api_versions:
-    kyc-tenure: 0.3.0-alpha.1
+  last_published:
+    release_tag: r3.2
+    release_date: '2026-08-11T08:25:04Z'
+    apis:
+    - api_name: kyc-tenure
+      api_version: 0.3.0-rc.1
 - repository: TrafficInfluence
   github_url: https://github.com/camaraproject/TrafficInfluence
   release_track: meta-release
@@ -2771,6 +3219,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.3
     newest_pre_release: null
@@ -2803,52 +3252,65 @@ progress:
   github_url: https://github.com/camaraproject/VerifiedCaller
   release_track: meta-release
   meta_release: Sync26
-  target_release_tag: r2.1
-  target_release_type: pre-release-alpha
+  target_release_tag: r2.3
+  target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.3
+    commonalities_release: r4.4
     identity_consent_management_release: r4.2
   apis:
   - api_name: brand-registration
     target_api_version: 0.2.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - alpaycetin74
     - olsi-korkuti
-    - stroncoso-quobis
     - GillesInnov35
   - api_name: verified-caller
     target_api_version: 0.2.0
-    target_api_status: alpha
+    target_api_status: rc
     main_contacts:
     - alpaycetin74
     - olsi-korkuti
-    - stroncoso-quobis
     - GillesInnov35
   state: planned
   artifacts:
     snapshot_branch: null
     release_pr: null
     draft_release: null
-    release_issue:
-      number: 110
-      url: https://github.com/camaraproject/VerifiedCaller/issues/110
+    release_issue: null
+    review_history: null
   published_context:
     latest_public_release: r1.3
-    newest_pre_release: null
+    newest_pre_release: r2.2
   cycle_releases:
     m1:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.1
+      release_date: '2026-06-30T06:06:19Z'
+      apis:
+      - api_name: brand-registration
+        api_version: 0.2.0-alpha.1
+      - api_name: verified-caller
+        api_version: 0.2.0-alpha.1
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r2.2
+      release_date: '2026-09-10T13:07:52Z'
+      apis:
+      - api_name: brand-registration
+        api_version: 0.2.0-rc.1
+      - api_name: verified-caller
+        api_version: 0.2.0-rc.1
     m4:
       release_tag: null
       release_date: null
       apis: []
+  last_published:
+    release_tag: r2.2
+    release_date: '2026-09-10T13:07:52Z'
+    apis:
+    - api_name: brand-registration
+      api_version: 0.2.0-rc.1
+    - api_name: verified-caller
+      api_version: 0.2.0-rc.1
 - repository: VoiceNotification
   github_url: https://github.com/camaraproject/VoiceNotification
   release_track: independent
@@ -2869,6 +3331,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -2905,6 +3368,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -2928,7 +3392,7 @@ progress:
   target_release_tag: r3.1
   target_release_type: pre-release-rc
   dependencies:
-    commonalities_release: r4.2
+    commonalities_release: r4.3
     identity_consent_management_release: r4.2
   apis:
   - api_name: webrtc-call-handling
@@ -2939,7 +3403,7 @@ progress:
     - pradeepachar-mavenir
     - deepakjaiswal1
     - teikuran
-  - api_name: webrtc-events
+  - api_name: webrtc-events-subscriptions
     target_api_version: 0.3.0
     target_api_status: rc
     main_contacts:
@@ -2955,17 +3419,18 @@ progress:
     - pradeepachar-mavenir
     - deepakjaiswal1
     - teikuran
-  state: snapshot_active
+  state: published
   artifacts:
-    snapshot_branch: release-snapshot/r3.1-a9f1a4b
-    release_pr:
-      number: 176
-      state: open
-      url: https://github.com/camaraproject/WebRTC/pull/176
+    snapshot_branch: null
+    release_pr: null
     draft_release: null
-    release_issue:
-      number: 155
-      url: https://github.com/camaraproject/WebRTC/issues/155
+    release_issue: null
+    review_history:
+      discarded_count: 3
+      last_reviewers:
+      - rartych
+      last_pr_url: https://github.com/camaraproject/WebRTC/pull/206
+      last_closed_at: '2026-09-08T10:43:09Z'
   published_context:
     latest_public_release: r2.2
     newest_pre_release: null
@@ -2984,8 +3449,145 @@ progress:
       apis: []
   snapshot_api_versions:
     webrtc-call-handling: 0.4.0-rc.1
-    webrtc-events: 0.3.0-rc.1
+    webrtc-events-subscriptions: 0.3.0-rc.1
     webrtc-registration: 0.4.0-rc.1
+  warnings:
+  - code: W003
+    message: Release r3.1 has been published. Milestone data will be updated in the
+      next 24 hours.
+    severity: warning
+- repository: ApplicationEndpointDiscovery
+  github_url: https://github.com/camaraproject/ApplicationEndpointDiscovery
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: application-endpoint-discovery
+    target_api_version: 0.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-24T10:18:04Z'
+      apis:
+      - api_name: application-endpoint-discovery
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-16T19:23:11Z'
+      apis:
+      - api_name: application-endpoint-discovery
+        api_version: 0.1.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2025-09-16T19:23:11Z'
+    apis:
+    - api_name: application-endpoint-discovery
+      api_version: 0.1.0
+  source: historical
+- repository: ApplicationEndpointRegistration
+  github_url: https://github.com/camaraproject/ApplicationEndpointRegistration
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: application-endpoint-registration
+    target_api_version: 0.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-31T09:55:23Z'
+      apis:
+      - api_name: application-endpoint-registration
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-17T09:17:03Z'
+      apis:
+      - api_name: application-endpoint-registration
+        api_version: 0.1.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2025-09-17T09:17:03Z'
+    apis:
+    - api_name: application-endpoint-registration
+      api_version: 0.1.0
+  source: historical
+- repository: ApplicationProfiles
+  github_url: https://github.com/camaraproject/ApplicationProfiles
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: application-profiles
+    target_api_version: 0.5.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-29T16:08:11Z'
+      apis:
+      - api_name: application-profiles
+        api_version: 0.5.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-17T15:37:44Z'
+      apis:
+      - api_name: application-profiles
+        api_version: 0.5.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2025-09-17T15:37:44Z'
+    apis:
+    - api_name: application-profiles
+      api_version: 0.5.0
+  source: historical
 - repository: BlockchainPublicAddress
   github_url: https://github.com/camaraproject/BlockchainPublicAddress
   release_track: meta-release
@@ -3002,6 +3604,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3045,6 +3648,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3075,6 +3679,52 @@ progress:
 - repository: CallForwardingSignal
   github_url: https://github.com/camaraproject/CallForwardingSignal
   release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: call-forwarding-signal
+    target_api_version: 0.4.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: r3.1
+      release_date: '2025-06-16T09:51:19Z'
+      apis:
+      - api_name: call-forwarding-signal
+        api_version: 0.4.0-alpha.1
+    m3:
+      release_tag: r3.2
+      release_date: '2025-07-16T21:31:41Z'
+      apis:
+      - api_name: call-forwarding-signal
+        api_version: 0.4.0-rc.1
+    m4:
+      release_tag: r3.3
+      release_date: '2025-09-16T14:38:30Z'
+      apis:
+      - api_name: call-forwarding-signal
+        api_version: 0.4.0
+  last_published:
+    release_tag: r3.3
+    release_date: '2025-09-16T14:38:30Z'
+    apis:
+    - api_name: call-forwarding-signal
+      api_version: 0.4.0
+  source: historical
+- repository: CallForwardingSignal
+  github_url: https://github.com/camaraproject/CallForwardingSignal
+  release_track: meta-release
   meta_release: Spring25
   target_release_tag: null
   target_release_type: null
@@ -3088,6 +3738,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3134,6 +3785,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3186,6 +3838,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3221,7 +3874,8 @@ progress:
   source: historical
 - repository: ClickToDial
   github_url: https://github.com/camaraproject/ClickToDial
-  release_track: independent
+  release_track: meta-release
+  meta_release: Spring26
   target_release_tag: null
   target_release_type: null
   apis:
@@ -3234,6 +3888,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3282,6 +3937,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3337,6 +3993,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3395,6 +4052,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3450,6 +4108,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3505,6 +4164,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3548,6 +4208,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3591,6 +4252,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3640,6 +4302,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3698,6 +4361,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3751,6 +4415,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3794,6 +4459,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3845,6 +4511,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3906,6 +4573,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -3967,6 +4635,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4025,6 +4694,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4077,6 +4747,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4135,6 +4806,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4211,6 +4883,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4270,6 +4943,50 @@ progress:
   source: historical
 - repository: DeviceSwap
   github_url: https://github.com/camaraproject/DeviceSwap
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: device-swap
+    target_api_version: 1.0.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r3.1
+      release_date: '2025-07-23T09:43:47Z'
+      apis:
+      - api_name: device-swap
+        api_version: 1.0.0-rc.1
+    m4:
+      release_tag: r3.2
+      release_date: '2025-09-18T11:54:24Z'
+      apis:
+      - api_name: device-swap
+        api_version: 1.0.0
+  last_published:
+    release_tag: r3.2
+    release_date: '2025-09-18T11:54:24Z'
+    apis:
+    - api_name: device-swap
+      api_version: 1.0.0
+  source: historical
+- repository: DeviceSwap
+  github_url: https://github.com/camaraproject/DeviceSwap
   release_track: independent
   target_release_tag: null
   target_release_type: null
@@ -4283,6 +5000,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4326,6 +5044,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4369,6 +5088,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4414,6 +5134,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4466,6 +5187,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4521,6 +5243,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4576,6 +5299,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4619,6 +5343,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4662,6 +5387,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4711,6 +5437,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4765,6 +5492,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4792,14 +5520,17 @@ progress:
     - api_name: most-frequent-location
       api_version: 0.1.0
   source: historical
-- repository: NetworkAccessManagement
-  github_url: https://github.com/camaraproject/NetworkAccessManagement
+- repository: NetworkInsights
+  github_url: https://github.com/camaraproject/NetworkInsights
   release_track: independent
   target_release_tag: null
   target_release_type: null
   apis:
-  - api_name: network-access-management
-    target_api_version: 0.2.0-alpha.1
+  - api_name: network-health-assessment
+    target_api_version: 0.1.0
+    target_api_status: ''
+  - api_name: network-traffic-analysis
+    target_api_version: 0.1.0
     target_api_status: ''
   state: historical
   artifacts:
@@ -4807,30 +5538,43 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
   cycle_releases:
     m1:
-      release_tag: r2.1
-      release_date: '2026-05-28T15:15:46Z'
+      release_tag: r1.1
+      release_date: '2026-04-16T01:13:01Z'
       apis:
-      - api_name: network-access-management
-        api_version: 0.2.0-alpha.1
+      - api_name: network-health-assessment
+        api_version: 0.1.0-alpha.1
+      - api_name: network-traffic-analysis
+        api_version: 0.1.0-alpha.1
     m3:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r1.2
+      release_date: '2026-05-22T03:21:06Z'
+      apis:
+      - api_name: network-health-assessment
+        api_version: 0.1.0-rc.1
+      - api_name: network-traffic-analysis
+        api_version: 0.1.0-rc.1
     m4:
-      release_tag: null
-      release_date: null
-      apis: []
+      release_tag: r1.3
+      release_date: '2026-06-25T00:45:46Z'
+      apis:
+      - api_name: network-health-assessment
+        api_version: 0.1.0
+      - api_name: network-traffic-analysis
+        api_version: 0.1.0
   last_published:
-    release_tag: r2.1
-    release_date: '2026-05-28T15:15:46Z'
+    release_tag: r1.3
+    release_date: '2026-06-25T00:45:46Z'
     apis:
-    - api_name: network-access-management
-      api_version: 0.2.0-alpha.1
+    - api_name: network-health-assessment
+      api_version: 0.1.0
+    - api_name: network-traffic-analysis
+      api_version: 0.1.0
   source: historical
 - repository: NetworkSliceBooking
   github_url: https://github.com/camaraproject/NetworkSliceBooking
@@ -4848,6 +5592,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4891,6 +5636,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4934,6 +5680,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -4977,6 +5724,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5020,6 +5768,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5063,6 +5812,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5106,6 +5856,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5149,6 +5900,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5192,6 +5944,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5219,6 +5972,50 @@ progress:
     - api_name: one-time-password-sms
       api_version: 1.1.0
   source: historical
+- repository: OptimalEdgeDiscovery
+  github_url: https://github.com/camaraproject/OptimalEdgeDiscovery
+  release_track: meta-release
+  meta_release: Fall25
+  target_release_tag: null
+  target_release_type: null
+  apis:
+  - api_name: optimal-edge-discovery
+    target_api_version: 0.1.0
+    target_api_status: ''
+  state: historical
+  artifacts:
+    snapshot_branch: null
+    release_pr: null
+    draft_release: null
+    release_issue: null
+    review_history: null
+  published_context:
+    latest_public_release: null
+    newest_pre_release: null
+  cycle_releases:
+    m1:
+      release_tag: null
+      release_date: null
+      apis: []
+    m3:
+      release_tag: r1.1
+      release_date: '2025-07-30T16:41:18Z'
+      apis:
+      - api_name: optimal-edge-discovery
+        api_version: 0.1.0-rc.1
+    m4:
+      release_tag: r1.2
+      release_date: '2025-09-17T15:32:16Z'
+      apis:
+      - api_name: optimal-edge-discovery
+        api_version: 0.1.0
+  last_published:
+    release_tag: r1.2
+    release_date: '2025-09-17T15:32:16Z'
+    apis:
+    - api_name: optimal-edge-discovery
+      api_version: 0.1.0
+  source: historical
 - repository: PopulationDensityData
   github_url: https://github.com/camaraproject/PopulationDensityData
   release_track: meta-release
@@ -5235,6 +6032,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5278,6 +6076,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5321,6 +6120,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5364,6 +6164,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5410,6 +6211,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5465,6 +6267,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5526,6 +6329,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5587,6 +6391,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5642,6 +6447,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5665,46 +6471,6 @@ progress:
     - api_name: region-device-count
       api_version: 0.1.0
   source: historical
-- repository: SessionInsights
-  github_url: https://github.com/camaraproject/SessionInsights
-  release_track: independent
-  target_release_tag: null
-  target_release_type: null
-  apis:
-  - api_name: session-insights
-    target_api_version: 0.1.0-alpha.1
-    target_api_status: ''
-  state: historical
-  artifacts:
-    snapshot_branch: null
-    release_pr: null
-    draft_release: null
-    release_issue: null
-  published_context:
-    latest_public_release: null
-    newest_pre_release: null
-  cycle_releases:
-    m1:
-      release_tag: r1.1
-      release_date: '2026-05-07T09:55:28Z'
-      apis:
-      - api_name: session-insights
-        api_version: 0.1.0-alpha.1
-    m3:
-      release_tag: null
-      release_date: null
-      apis: []
-    m4:
-      release_tag: null
-      release_date: null
-      apis: []
-  last_published:
-    release_tag: r1.1
-    release_date: '2026-05-07T09:55:28Z'
-    apis:
-    - api_name: session-insights
-      api_version: 0.1.0-alpha.1
-  source: historical
 - repository: SimSwap
   github_url: https://github.com/camaraproject/SimSwap
   release_track: meta-release
@@ -5724,6 +6490,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5776,6 +6543,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5828,6 +6596,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5877,6 +6646,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5920,6 +6690,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -5963,6 +6734,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -6006,6 +6778,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -6049,6 +6822,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -6095,6 +6869,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -6150,6 +6925,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
@@ -6211,6 +6987,7 @@ progress:
     release_pr: null
     draft_release: null
     release_issue: null
+    review_history: null
   published_context:
     latest_public_release: null
     newest_pre_release: null
